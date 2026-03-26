@@ -65,8 +65,8 @@ const resolvedOgImage = ogImage || new URL('/images/og-default.jpg', Astro.site)
     <!-- JSON-LD Structured Data -->
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
-    <!-- Font preload: body serif only (others use font-display:swap fallback) -->
-    <link rel="preload" href="/fonts/SourceSerif4-VariableFont.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Font preload: display font only — others use font-display:swap -->
+    <link rel="preload" href="/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Page-specific head content -->
     <slot name="head" />

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: 'Fraunces';
+    src: url('../public/fonts/Fraunces-Variable.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 36;
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url('../public/fonts/Inter-VariableFont.woff2') format('woff2');
+    font-weight: 100 900;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #f6f1eb;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Warm tinted background with subtle texture */
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 75% 40%, rgba(184, 35, 42, 0.04) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 70%, rgba(184, 35, 42, 0.025) 0%, transparent 60%),
+      linear-gradient(170deg, #f6f1eb 0%, #f0e9e0 100%);
+  }
+
+  /* Abstract editorial grid lines */
+  .grid-lines {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    opacity: 0.045;
+  }
+
+  /* Accent rule */
+  .accent-rule {
+    width: 48px;
+    height: 3px;
+    background: #b8232a;
+    margin-bottom: 36px;
+    opacity: 0.8;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 72px 80px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Brand */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: auto;
+  }
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid rgba(17, 17, 17, 0.12);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand-mark span {
+    display: block;
+    width: 12px;
+    height: 2.5px;
+    background: #b8232a;
+  }
+  .brand-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.35);
+  }
+
+  /* Main title */
+  .title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: #111;
+    font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;
+    max-width: 700px;
+    margin-bottom: 28px;
+  }
+
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16.5px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.45);
+    max-width: 520px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Bottom tagline */
+  .bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .bottom-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(17, 17, 17, 0.15);
+  }
+  .bottom-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  /* Right side decorative element — large faint number */
+  .deco-number {
+    position: absolute;
+    right: 60px;
+    bottom: 50px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 280px;
+    font-weight: 200;
+    font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;
+    color: rgba(184, 35, 42, 0.045);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  /* Vertical accent line */
+  .vert-accent {
+    position: absolute;
+    right: 120px;
+    top: 72px;
+    bottom: 72px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(184, 35, 42, 0.1) 30%, rgba(184, 35, 42, 0.1) 70%, transparent);
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <svg class="grid-lines" viewBox="0 0 600 630" fill="none" preserveAspectRatio="xMaxYMid slice">
+    <line x1="100" y1="0" x2="100" y2="630" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="630" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="0" y1="158" x2="600" y2="158" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="0" y1="315" x2="600" y2="315" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="0" y1="473" x2="600" y2="473" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="50" y1="80" x2="550" y2="560" stroke="#b8232a" stroke-width="1" opacity="0.15"/>
+    <circle cx="300" cy="315" r="40" stroke="#b8232a" stroke-width="1" fill="none" opacity="0.08"/>
+    <circle cx="300" cy="315" r="4" fill="#b8232a" opacity="0.12"/>
+  </svg>
+
+  <div class="vert-accent"></div>
+  <div class="deco-number">T</div>
+
+  <div class="content">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-name">Throughline</div>
+    </div>
+
+    <div style="margin-top: auto; margin-bottom: auto;">
+      <div class="accent-rule"></div>
+      <div class="title">Visual stories for a complicated world</div>
+      <div class="subtitle">Data-driven stories about the second and third-order effects that connect geopolitical shocks to daily life.</div>
+    </div>
+
+    <div class="bottom">
+      <div class="bottom-line"></div>
+      <div class="bottom-text">Data-driven · Editorially serious</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -85,6 +85,12 @@ const articleMeta = {
   articleMeta={articleMeta}
   jsonLd={jsonLd}
 >
+  {/* Preload hero image for fast LCP */}
+  {heroImage && (
+    <Fragment slot="head">
+      <link rel="preload" href={heroImage.replace(/\.jpg$/, '.webp')} as="image" type="image/webp" fetchpriority="high" />
+    </Fragment>
+  )}
   <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
 
   <!-- Nav — appears on scroll -->
@@ -106,13 +112,23 @@ const articleMeta = {
       <header class="relative min-h-[100svh] flex flex-col overflow-hidden">
         <!-- Background image -->
         <div class="absolute inset-0">
-          <img
-            src={heroImage}
-            alt={heroAlt || title}
-            class="w-full h-full object-cover scale-[1.05]"
-            loading="eager"
-            id="hero-image"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset={`${heroImage.replace(/\.jpg$/, '-480.webp')} 480w, ${heroImage.replace(/\.jpg$/, '-768.webp')} 768w, ${heroImage.replace(/\.jpg$/, '.webp')} 1200w`}
+              sizes="100vw"
+            />
+            <img
+              src={heroImage}
+              alt={heroAlt || title}
+              class="w-full h-full object-cover scale-[1.05]"
+              loading="eager"
+              fetchpriority="high"
+              width="1200"
+              height="675"
+              id="hero-image"
+            />
+          </picture>
           <!-- Softened gradient overlays -->
           <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
           <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/50 via-transparent to-transparent"></div>

@@ -8,6 +8,9 @@ export default defineConfig({
   site: 'https://throughline.pages.dev',
   output: 'static',
   compressHTML: true,
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [mdx(), react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],

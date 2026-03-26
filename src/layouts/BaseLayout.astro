@@ -65,13 +65,11 @@ const resolvedOgImage = ogImage || new URL('/images/og-default.jpg', Astro.site)
     <!-- JSON-LD Structured Data -->
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
-    <!-- Font preloads (critical path only: body + display + UI) -->
+    <!-- Font preload: body serif only (others use font-display:swap fallback) -->
     <link rel="preload" href="/fonts/SourceSerif4-VariableFont.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/Fraunces-Variable.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- DNS prefetch for map tiles -->
-    <link rel="preconnect" href="https://tiles.stadiamaps.com" crossorigin />
+    <!-- Page-specific head content -->
+    <slot name="head" />
 
     <!-- MapLibre GL CSS (deferred — only needed when maps scroll into view) -->
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" media="print" onload="this.media='all'" />

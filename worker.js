@@ -8,11 +8,7 @@ const SECURITY_HEADERS = {
   "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self'; img-src 'self' data: https:; connect-src 'self' https://*.stadiamaps.com https://tiles.stadiamaps.com",
 };
 
-const FONT_PRELOADS = [
-  '</fonts/SourceSerif4-VariableFont.woff2>; rel=preload; as=font; type=font/woff2; crossorigin',
-  '</fonts/Fraunces-Variable.ttf>; rel=preload; as=font; type=font/ttf; crossorigin',
-  '</fonts/Inter-VariableFont.woff2>; rel=preload; as=font; type=font/woff2; crossorigin',
-].join(', ');
+const FONT_PRELOADS = '</fonts/SourceSerif4-VariableFont.woff2>; rel=preload; as=font; type=font/woff2; crossorigin';
 
 function getCacheControl(pathname) {
   if (pathname.startsWith('/_astro/') || pathname.startsWith('/fonts/')) {

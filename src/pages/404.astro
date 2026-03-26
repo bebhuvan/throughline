@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found — Throughline">
+  <div class="min-h-screen flex items-center justify-center bg-paper">
+    <div class="text-center px-6 py-24 max-w-lg">
+      <span class="block text-[clamp(5rem,15vw,10rem)] font-light tracking-[-0.06em] leading-none text-accent/15" style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;">
+        404
+      </span>
+      <p class="mt-8 font-serif text-[1.25rem] font-light text-ink-secondary leading-relaxed">
+        This page doesn't exist — or it was moved.
+      </p>
+      <a href="/" class="inline-flex items-center gap-2 mt-10 font-sans text-[0.8125rem] font-semibold text-accent hover:text-accent-warm transition-colors">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M10 4L6 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to all stories
+      </a>
+    </div>
+  </div>
+</BaseLayout>

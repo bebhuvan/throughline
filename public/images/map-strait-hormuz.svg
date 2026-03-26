@@ -1,0 +1,55 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <rect class="m-water" width="900" height="520"/>
+  <path class="m-land" d="M604.5,279.2 L605.4,337.8 L606.8,341.9 L603.5,342.6 L595.3,353.9 L589.3,357.5 L579.9,366.5 L575.8,367.5 L570.5,361.2 L566.9,354.7 L567.7,353.3 L570.3,352.9 L571.3,349.5 L569.7,344.7 L566.2,342.9 L561.6,342.7 L557.3,344.9 L552.7,349.2 L550.1,353.8 L549.7,363.0 L550.9,378.4 L548.4,384.7 L547.5,393.9 L550.9,405.3 L551.1,408.9 L546.8,420.2 L550.5,422.4 L562.9,423.2 L568.9,436.2 L568.3,439.3 L548.5,444.2 L540.6,443.5 L526.4,447.0 L518.8,452.3 L523.7,458.2 L524.8,465.3 L522.6,475.3 L512.7,499.2 L194.2,499.2 L147.7,437.7 L145.7,432.4 L145.3,415.6 L148.9,410.1 L150.6,414.0 L154.6,419.4 L161.3,418.1 L164.4,419.0 L166.7,438.1 L171.7,444.9 L177.7,447.6 L198.0,449.1 L210.7,446.6 L235.6,434.1 L248.7,429.6 L285.0,430.4 L314.0,435.6 L359.2,438.7 L368.0,437.9 L392.4,427.8 L407.3,419.0 L416.2,416.5 L422.1,408.0 L425.9,396.9 L429.4,389.6 L433.8,386.1 L437.9,380.0 L441.3,370.0 L449.7,359.9 L483.3,335.3 L503.0,314.6 L504.7,307.9 L515.4,297.8 L524.0,286.8 L564.1,255.3 L572.1,242.4 L577.4,226.8 L580.8,226.2 L585.7,228.4 L586.2,239.3 L584.4,249.5 L583.5,266.3 L587.3,271.2 L593.6,273.2 L596.4,273.0 L598.2,270.6 L604.5,279.2 Z M307.2,419.2 L300.7,415.1 L314.3,409.7 L317.9,407.3 L321.9,402.3 L325.1,406.6 L321.6,413.3 L319.1,416.2 L314.2,418.6 L307.2,419.2 Z M244.1,416.1 L242.4,410.4 L242.6,408.6 L246.9,406.0 L249.6,410.7 L245.7,415.4 L244.1,416.1 Z M371.3,430.8 L361.6,429.8 L358.9,431.6 L351.0,430.6 L343.2,428.0 L348.5,423.6 L362.3,418.5 L368.0,423.2 L371.3,427.2 L371.3,430.8 Z M421.9,401.0 L412.4,399.0 L410.2,396.0 L414.5,392.4 L416.3,392.2 L419.0,396.0 L422.8,399.0 L421.9,401.0 Z"/>
+  <path class="m-land" d="M90.9,385.6 L99.9,386.0 L116.6,381.5 L123.3,386.0 L130.3,385.4 L131.0,389.6 L126.3,395.3 L120.6,409.9 L136.6,413.3 L142.1,415.6 L145.3,415.6 L145.7,432.4 L147.7,437.7 L194.2,499.2 L90.9,499.2 L90.9,385.6 Z"/>
+  <path class="m-land-alt" d="M128.9,377.5 L99.9,386.0 L90.9,385.6 L90.9,236.3 L101.3,224.9 L116.0,217.1 L128.2,232.2 L142.9,243.8 L145.7,256.7 L141.4,267.2 L137.4,284.0 L139.8,291.6 L140.7,298.3 L144.7,309.5 L148.6,324.0 L149.2,334.1 L147.1,343.5 L142.0,351.3 L131.9,375.0 L128.9,377.5 Z"/>
+  <path class="m-land-alt" d="M512.7,499.2 L522.6,475.3 L524.8,465.3 L523.7,458.2 L518.8,452.3 L526.4,447.0 L540.6,443.5 L548.5,444.2 L568.3,439.3 L568.9,436.2 L562.9,423.2 L550.5,422.4 L546.8,420.2 L551.1,408.9 L550.9,405.3 L547.5,393.9 L548.4,384.7 L550.9,378.4 L549.7,363.0 L550.1,353.8 L552.7,349.2 L557.3,344.9 L561.6,342.7 L566.2,342.9 L569.7,344.7 L571.3,349.5 L570.3,352.9 L567.7,353.3 L566.9,354.7 L570.5,361.2 L575.8,367.5 L579.9,366.5 L589.3,357.5 L595.3,353.9 L603.5,342.6 L606.8,341.9 L616.6,369.9 L631.0,396.0 L643.8,410.5 L657.1,430.1 L677.2,448.1 L686.5,454.3 L724.0,466.9 L744.5,471.7 L772.7,476.2 L792.3,486.0 L798.8,486.6 L809.1,483.7 L809.1,499.2 L512.7,499.2 Z M596.4,273.0 L593.6,273.2 L587.3,271.2 L583.5,266.3 L584.4,249.5 L586.2,239.3 L585.7,228.4 L580.8,226.2 L577.4,226.8 L585.4,211.4 L588.6,209.1 L591.6,210.1 L599.0,208.4 L602.9,200.1 L606.0,195.5 L609.2,196.1 L610.8,198.6 L609.6,221.9 L605.5,254.2 L601.2,259.8 L599.1,264.3 L598.2,270.6 L596.4,273.0 Z M592.7,317.5 L589.9,317.1 L590.4,311.4 L592.1,307.4 L596.2,307.7 L597.3,310.1 L596.7,314.7 L592.7,317.5 Z"/>
+  <path class="m-land" d="M578.8,148.2 L565.3,158.9 L559.6,155.6 L555.1,155.7 L545.5,159.8 L538.5,160.5 L525.9,167.8 L514.5,171.4 L503.8,170.4 L502.2,165.5 L502.3,163.5 L507.2,164.5 L524.9,157.9 L547.0,147.1 L549.1,142.3 L545.5,134.5 L546.5,132.7 L560.8,136.7 L576.8,128.9 L590.2,126.8 L596.4,132.2 L587.7,135.5 L578.8,148.2 Z M791.3,278.0 L780.6,276.8 L763.3,271.6 L755.1,266.2 L741.7,270.3 L735.6,262.7 L697.5,255.6 L690.4,242.0 L685.1,229.5 L684.7,216.5 L675.4,193.9 L672.3,161.1 L668.9,148.3 L663.7,137.2 L656.9,127.7 L647.5,117.5 L639.4,113.5 L603.8,105.8 L596.9,106.8 L581.0,111.9 L564.1,123.1 L536.2,129.5 L530.6,134.3 L523.6,145.2 L514.5,151.5 L502.1,149.9 L488.7,156.3 L464.0,174.2 L450.9,179.7 L439.9,179.3 L428.2,170.8 L401.8,159.4 L384.8,155.6 L361.2,158.2 L350.0,156.3 L331.0,142.9 L326.0,133.1 L315.1,126.6 L280.8,112.0 L252.9,92.7 L247.8,85.4 L244.4,74.7 L232.2,61.6 L205.1,50.9 L189.6,39.5 L171.5,36.9 L154.7,37.3 L147.3,35.2 L140.6,30.4 L131.2,20.8 L809.1,20.8 L809.1,276.9 L791.3,278.0 Z"/>
+  <text x="598" y="180" text-anchor="middle" font-family="'Newsreader', serif" font-size="17" font-weight="400" font-style="italic" fill="var(--teal)" letter-spacing="0.1em">Strait of Hormuz</text>
+  <text class="m-sea-text" x="235" y="180" transform="rotate(-15 235 180)" style="font-size: 14px;">Persian Gulf</text>
+  <text class="m-sea-text" x="713" y="393" style="font-size: 13px;">Gulf of Oman</text>
+  <text x="761" y="446" font-family="'Newsreader', serif" font-size="10" font-weight="300" font-style="italic" fill="#A5A196" opacity="0.4" letter-spacing="0.15em">to Arabian Sea &rarr;</text>
+  <text class="m-label" x="378" y="74" style="font-size: 14px;">IRAN</text>
+  <text class="m-label" x="618" y="361" style="font-size: 12px;">OMAN</text>
+  <text class="m-label" x="330" y="425" style="font-size: 12px;">U.A.E.</text>
+  <text class="m-label" x="120" y="287" style="font-size: 9px;">QATAR</text>
+  <path class="m-route-glow strait-lane" d="M234.6,212.2 L330.3,190.9 L426.1,180.3 L521.8,185.6 L569.7,196.2 L617.6,212.2 L665.4,233.4 L713.3,265.3 L761.2,307.8"/>
+  <path class="m-route strait-lane" id="lane-outbound" d="M234.6,212.2 L330.3,190.9 L426.1,180.3 L521.8,185.6 L569.7,196.2 L617.6,212.2 L665.4,233.4 L713.3,265.3 L761.2,307.8"/>
+  <path class="m-route-glow strait-lane" d="M761.2,329.1 L713.3,286.6 L665.4,254.7 L617.6,233.4 L569.7,217.5 L521.8,206.8 L426.1,201.5 L330.3,212.2 L234.6,233.4" style="opacity:0.04;"/>
+  <path class="m-route strait-lane" id="lane-inbound" d="M761.2,329.1 L713.3,286.6 L665.4,254.7 L617.6,233.4 L569.7,217.5 L521.8,206.8 L426.1,201.5 L330.3,212.2 L234.6,233.4" style="stroke: var(--teal-light); stroke-width: 1.8; opacity: 0.7;"/>
+  <line class="m-width-line" x1="579" y1="116" x2="579" y2="223"/>
+  <text class="m-width-label" x="587" y="170">21 nm (~39 km)</text>
+  <text class="m-note" x="646" y="202" font-size="10">Outbound lane &rarr;</text>
+  <text class="m-note" x="646" y="244" font-size="10" style="fill: var(--teal-light); opacity: 0.6;">&larr; Inbound lane</text>
+  <circle class="m-ring" cx="597" cy="107" r="12"/>
+  <circle class="m-dot" cx="597" cy="107" r="4"/>
+  <text class="m-port" x="607" y="105" style="font-size: 10px;font-weight:500;">Bandar Abbas</text>
+  <text x="607" y="116" font-family="'DM Mono', monospace" font-size="7" fill="var(--text-faint)">Iran's largest port</text>
+  <circle class="m-ring" cx="603" cy="327" r="10"/>
+  <circle class="m-dot" cx="603" cy="327" r="3.5"/>
+  <text class="m-port" x="613" y="325" style="font-size: 10px;font-weight:500;">Fujairah</text>
+  <text x="613" y="336" font-family="'DM Mono', monospace" font-size="7" fill="var(--text-faint)">Pipeline bypass terminal</text>
+  <circle class="m-ring" cx="594" cy="214" r="8"/>
+  <circle class="m-dot" cx="594" cy="214" r="3"/>
+  <text class="m-port" x="603" y="212" style="font-size: 9px;">Khasab</text>
+  <circle class="m-ring" cx="10" cy="164" r="8"/>
+  <circle class="m-dot" cx="10" cy="164" r="3"/>
+  <text class="m-port" x="19" y="162" style="font-size: 9px;">Ras Tanura</text>
+  <circle class="m-ring" cx="480" cy="338" r="8"/>
+  <circle class="m-dot" cx="480" cy="338" r="3"/>
+  <text class="m-port" x="489" y="336" style="font-size: 9px;">Jebel Ali</text>
+  <circle class="m-ring" cx="740" cy="272" r="6"/>
+  <circle class="m-dot" cx="740" cy="272" r="2.5"/>
+  <text class="m-port" x="749" y="270" style="font-size: 9px;">Bandar-e Jask</text>
+  <text x="749" y="281" font-family="'DM Mono', monospace" font-size="7" fill="var(--text-faint)">Iran bypass pipeline</text>
+  <path d="M378.2,424.8 L454.8,392.9 L521.8,361.0 L569.7,339.7 L603.2,327.0" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.4"/>
+  <text x="407" y="446" font-family="'DM Mono', monospace" font-size="8" fill="var(--accent)" opacity="0.6">Abu Dhabi crude pipeline</text>
+  <text x="407" y="457" font-family="'DM Mono', monospace" font-size="7" fill="var(--accent)" opacity="0.4">bypasses Strait of Hormuz</text>
+  <line x1="665" y1="478" x2="713" y2="478" stroke="#8A857A" stroke-width="1"/>
+  <line x1="665" y1="475" x2="665" y2="481" stroke="#8A857A" stroke-width="1"/>
+  <line x1="713" y1="475" x2="713" y2="481" stroke="#8A857A" stroke-width="1"/>
+  <text x="689" y="492" text-anchor="middle" font-family="'DM Mono', monospace" font-size="8" fill="#8A857A">~50 km</text>
+  <circle class="route-particle" cx="0" cy="0" r="4" fill="var(--teal)" opacity="0"/>
+  <circle class="route-particle" cx="0" cy="0" r="3.5" fill="var(--teal-light)" opacity="0"/>
+  <circle class="route-particle" cx="0" cy="0" r="3" fill="var(--teal)" opacity="0"/>
+</svg>

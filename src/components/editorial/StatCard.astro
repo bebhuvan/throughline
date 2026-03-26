@@ -1,0 +1,32 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  change?: string;
+  changeDirection?: 'up' | 'down' | 'neutral';
+}
+
+const { value, label, change, changeDirection = 'neutral' } = Astro.props;
+
+const changeColor = changeDirection === 'up'
+  ? 'text-[var(--color-viz-red)]'
+  : changeDirection === 'down'
+    ? 'text-[var(--color-viz-green)]'
+    : 'text-[var(--color-ink-faint)]';
+---
+
+<div class="relative py-8 first:pl-0 last:pr-0 px-5">
+  <span class="block text-[clamp(2.5rem,5vw,3.5rem)] font-light tracking-[-0.045em] leading-[0.82] text-ink tabular-nums" style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;">
+    {value}
+  </span>
+  <span class="block mt-4 font-sans text-[0.6875rem] font-semibold tracking-[0.08em] uppercase text-ink-secondary leading-snug max-w-[16rem]">
+    {label}
+  </span>
+  {change && (
+    <span class={`inline-flex items-center gap-1.5 mt-3 font-mono text-[0.75rem] font-semibold ${changeColor}`}>
+      {changeDirection === 'up' && <span class="text-[0.5625rem]">&#9650;</span>}
+      {changeDirection === 'down' && <span class="text-[0.5625rem]">&#9660;</span>}
+      {change}
+    </span>
+  )}
+</div>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  number: number;
+  title: string;
+  stat?: string;
+  color?: string;
+}
+
+const { number, title, stat, color = 'var(--color-accent)' } = Astro.props;
+---
+
+<div class="grid grid-cols-[3.5rem_1fr] gap-5 py-6 border-b border-rule-light last:border-0">
+  <div class="flex flex-col items-center">
+    <span class="flex items-center justify-center w-10 h-10 rounded-full font-sans text-[0.8125rem] font-bold text-white" style={`background: ${color}`}>
+      {number}
+    </span>
+  </div>
+  <div>
+    <h4 class="font-serif text-[1.125rem] font-medium leading-snug">{title}</h4>
+    {stat && (
+      <span class="inline-block mt-2 font-sans text-[0.75rem] font-bold tracking-wide" style={`color: ${color}`}>
+        {stat}
+      </span>
+    )}
+    <div class="mt-2 font-serif text-[0.9375rem] font-light leading-relaxed text-ink-secondary">
+      <slot />
+    </div>
+  </div>
+</div>

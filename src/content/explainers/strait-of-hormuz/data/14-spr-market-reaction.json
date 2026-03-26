@@ -1,0 +1,33 @@
+{
+  "title": "The market ignored the biggest oil release in history",
+  "subtitle": "Brent crude oil intraday prices around the IEA SPR release announcement, $/barrel",
+  "source": "Bloomberg, JP Morgan Asset Management, March 13, 2026",
+  "editorialPoint": "The IEA released 412 million barrels — the largest coordinated stock release in the agency's 50-year history. Oil prices barely flinched. The market judged it insufficient against 16-17 million barrels per day of disrupted supply.",
+  "timeline": [
+    { "date": "2026-03-04", "price": 92, "label": null },
+    { "date": "2026-03-05", "price": 96, "label": null },
+    { "date": "2026-03-06", "price": 100, "label": "Brent crosses $100" },
+    { "date": "2026-03-07", "price": 104, "label": null },
+    { "date": "2026-03-08", "price": 112, "label": null },
+    { "date": "2026-03-09", "price": 108, "label": null },
+    { "date": "2026-03-10", "price": 110, "label": null },
+    { "date": "2026-03-11", "price": 107, "label": "IEA announces 412M barrel release" },
+    { "date": "2026-03-12", "price": 103, "label": "Brief dip" },
+    { "date": "2026-03-13", "price": 108, "label": "Prices resume climb" },
+    { "date": "2026-03-14", "price": 112, "label": null },
+    { "date": "2026-03-15", "price": 118, "label": null },
+    { "date": "2026-03-16", "price": 115, "label": null },
+    { "date": "2026-03-17", "price": 120, "label": null },
+    { "date": "2026-03-18", "price": 126, "label": "Brent peak: $126/bbl" }
+  ],
+  "context": {
+    "sprTotal": "412 million barrels",
+    "usContribution": "172 million barrels (42%)",
+    "japanContribution": "80 million barrels",
+    "europeContribution": "115 million barrels",
+    "drawdownRate": "~1.2-2 million barrels/day",
+    "coverageDays": "~20 days at current disruption levels",
+    "dailyDisruption": "16-17 million barrels/day",
+    "historicalComparison": "1991 Gulf War SPR release caused Brent to fall 40%. This release had almost no effect."
+  }
+}

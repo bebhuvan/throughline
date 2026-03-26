@@ -1,0 +1,6 @@
+name = "throughline"
+compatibility_date = "2026-03-01"
+main = "worker.js"
+
+[assets]
+directory = "dist"

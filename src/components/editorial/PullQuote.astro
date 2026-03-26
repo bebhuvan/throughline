@@ -1,0 +1,28 @@
+---
+interface Props {
+  attribution?: string;
+}
+
+const { attribution } = Astro.props;
+---
+
+<figure class="my-28 max-w-xl mx-auto reveal">
+  {/* Top ornament */}
+  <div class="flex items-center gap-4 mb-10">
+    <span class="block w-16 h-[2.5px] bg-accent/50 rounded-full"></span>
+    <span class="block w-[7px] h-[7px] bg-accent/55 rounded-full"></span>
+  </div>
+
+  <blockquote style="font-family: var(--font-display); text-wrap: pretty; text-indent: 0; hanging-punctuation: first; font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 28;">
+    <p class="text-[1.625rem] md:text-[2rem] font-light leading-[1.35] tracking-[-0.018em] text-ink">
+      <slot />
+    </p>
+  </blockquote>
+
+  {attribution && (
+    <figcaption class="mt-10 flex items-center gap-4">
+      <span class="block w-14 h-[2px] bg-accent/40 rounded-full"></span>
+      <span class="font-sans text-[0.8125rem] font-medium text-ink-tertiary tracking-[0.01em]">{attribution}</span>
+    </figcaption>
+  )}
+</figure>

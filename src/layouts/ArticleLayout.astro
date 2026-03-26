@@ -1,0 +1,281 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Footer from '@/components/layout/Footer.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  description: string;
+  author: string;
+  publishedAt: Date;
+  updatedAt?: Date;
+  category: string;
+  tags?: string[];
+  readingTime?: number;
+  heroImage?: string;
+  heroAlt?: string;
+  heroCaption?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  author,
+  publishedAt,
+  updatedAt,
+  category,
+  tags = [],
+  readingTime,
+  heroImage,
+  heroAlt,
+  heroCaption,
+  ogImage,
+} = Astro.props;
+
+const formattedDate = publishedAt.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const resolvedOgImage = ogImage || heroImage || undefined;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: resolvedOgImage ? [resolvedOgImage] : undefined,
+  datePublished: publishedAt.toISOString(),
+  dateModified: (updatedAt || publishedAt).toISOString(),
+  author: {
+    '@type': 'Organization',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Throughline',
+    url: Astro.site?.href,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+  articleSection: category,
+  keywords: tags.join(', ') || undefined,
+  wordCount: readingTime ? readingTime * 230 : undefined,
+};
+
+const articleMeta = {
+  publishedTime: publishedAt.toISOString(),
+  modifiedTime: (updatedAt || publishedAt).toISOString(),
+  author,
+  tags,
+};
+---
+
+<BaseLayout
+  title={`${title} — Throughline`}
+  description={description}
+  ogImage={resolvedOgImage}
+  ogType="article"
+  articleMeta={articleMeta}
+  jsonLd={jsonLd}
+>
+  <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+
+  <!-- Nav — appears on scroll -->
+  <nav aria-label="Article navigation" class="fixed top-0 left-0 right-0 z-50 opacity-0 transition-all duration-700 pointer-events-none" id="site-nav">
+    <div class="max-w-[var(--measure-full)] mx-auto px-6 flex items-center justify-between h-11">
+      <a href="/" class="flex items-center gap-3 pointer-events-auto group">
+        <div class="w-5 h-5 border border-ink/10 rounded-sm flex items-center justify-center group-hover:border-accent/30 transition-colors">
+          <span class="block w-2 h-[1.5px] bg-accent"></span>
+        </div>
+        <span class="font-sans text-[0.5625rem] font-bold text-ink-tertiary group-hover:text-accent transition-colors tracking-[0.15em] uppercase">Throughline</span>
+      </a>
+      <span class="font-serif text-[0.75rem] text-ink-faint font-light transition-opacity duration-500 tracking-wide hidden md:block" id="nav-title"></span>
+    </div>
+  </nav>
+
+  <article>
+    {heroImage ? (
+      <!-- ═══════ IMMERSIVE HERO ═══════ -->
+      <header class="relative min-h-[100svh] flex flex-col overflow-hidden">
+        <!-- Background image -->
+        <div class="absolute inset-0">
+          <img
+            src={heroImage}
+            alt={heroAlt || title}
+            class="w-full h-full object-cover scale-[1.05]"
+            loading="eager"
+            id="hero-image"
+          />
+          <!-- Softened gradient overlays -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/50 via-transparent to-transparent"></div>
+          <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, rgba(10,10,10,0.3) 100%);"></div>
+        </div>
+
+        <!-- Top bar -->
+        <div class="relative z-10 max-w-[var(--measure-full)] mx-auto px-6 w-full pt-8 flex items-center justify-between">
+          <a href="/" class="flex items-center gap-3 group">
+            <div class="w-6 h-6 border border-white/10 rounded-sm flex items-center justify-center group-hover:border-[var(--color-accent)]/30 transition-colors">
+              <span class="block w-2.5 h-[2px] bg-[var(--color-accent)]"></span>
+            </div>
+            <span class="font-sans text-[0.5625rem] font-bold tracking-[0.25em] uppercase text-white/30 group-hover:text-white/50 transition-colors">Throughline</span>
+          </a>
+        </div>
+
+        <!-- Content, anchored to bottom -->
+        <div class="relative z-10 mt-auto max-w-[var(--measure-wide)] mx-auto px-6 w-full pb-20 md:pb-28">
+          <div class="max-w-3xl">
+
+            <!-- Category + reading time -->
+            <div class="flex items-center gap-4 mb-7 fade-up">
+              <span class="block w-10 h-[2px] bg-[var(--color-accent)]"></span>
+              <span class="font-sans text-[0.5625rem] font-bold tracking-[0.25em] uppercase text-[var(--color-accent)]">{category}</span>
+              {readingTime && (
+                <>
+                  <span class="block w-4 h-px bg-white/10"></span>
+                  <span class="font-sans text-[0.5625rem] tracking-[0.12em] uppercase text-white/25">{readingTime} min read</span>
+                </>
+              )}
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-[clamp(2.75rem,7.5vw,5rem)] font-light tracking-[-0.04em] leading-[0.92] text-white fade-up fade-up-delay-1" style="font-family: var(--font-display); text-wrap: balance; font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;">
+              {title}
+            </h1>
+
+            <!-- Subtitle -->
+            {subtitle && (
+              <p class="mt-8 font-serif text-[1.125rem] md:text-[1.3125rem] font-light leading-[1.75] text-white/35 max-w-2xl fade-up fade-up-delay-2" style="text-wrap: pretty;">
+                {subtitle}
+              </p>
+            )}
+
+            <!-- Meta line -->
+            <div class="mt-12 pt-6 border-t border-white/8 flex flex-wrap items-center gap-x-6 gap-y-2 fade-up fade-up-delay-3">
+              <span class="font-sans text-[0.625rem] text-white/25">By <strong class="font-semibold text-white/45">{author}</strong></span>
+              <span class="block w-3 h-px bg-white/8"></span>
+              <time class="font-sans text-[0.625rem] text-white/25" datetime={publishedAt.toISOString()}>{formattedDate}</time>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Caption -->
+        {heroCaption && (
+          <div class="absolute bottom-4 right-6 z-10">
+            <span class="font-sans text-[0.5rem] text-white/10 tracking-wide">{heroCaption}</span>
+          </div>
+        )}
+
+        <!-- Scroll cue -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 fade-up fade-up-delay-5">
+          <div class="flex flex-col items-center gap-2">
+            <span class="font-sans text-[0.45rem] tracking-[0.3em] uppercase text-white/10">Scroll</span>
+            <div class="w-px h-8 bg-gradient-to-b from-white/15 to-transparent scroll-pulse"></div>
+          </div>
+        </div>
+      </header>
+    ) : (
+      <!-- ═══════ SIMPLE HEADER ═══════ -->
+      <header class="container-prose" style="margin-top: 20vh;">
+        <div class="ornament-rule mb-6 fade-up"></div>
+        <span class="text-section fade-up">{category}</span>
+        <h1 class="text-display mt-4 fade-up fade-up-delay-1">{title}</h1>
+        {subtitle && (
+          <p class="text-subheadline mt-6 max-w-lg fade-up fade-up-delay-2">{subtitle}</p>
+        )}
+        <div class="mt-14 pt-5 border-t border-rule flex flex-wrap items-center gap-x-6 gap-y-2 fade-up fade-up-delay-3">
+          <span class="text-meta">By <strong class="font-semibold text-ink-secondary">{author}</strong></span>
+          <span class="text-meta text-rule">&bull;</span>
+          <time class="text-meta" datetime={publishedAt.toISOString()}>{formattedDate}</time>
+          {readingTime && (
+            <>
+              <span class="text-meta text-rule">&bull;</span>
+              <span class="text-meta">{readingTime} min read</span>
+            </>
+          )}
+        </div>
+      </header>
+    )}
+
+    <!-- Body -->
+    <div class="prose article-body mt-16 pb-24">
+      <slot />
+    </div>
+  </article>
+
+  <!-- End mark -->
+  <div class="flex justify-center pb-16">
+    <div class="flex flex-col items-center gap-3">
+      <div class="flex items-center gap-4">
+        <span class="block w-14 h-px bg-gradient-to-r from-transparent to-rule"></span>
+        <span class="block w-[5px] h-[5px] bg-accent rounded-full"></span>
+        <span class="block w-14 h-px bg-gradient-to-l from-transparent to-rule"></span>
+      </div>
+      <span class="font-sans text-[0.5rem] tracking-[0.2em] uppercase text-ink-faint/40">End</span>
+    </div>
+  </div>
+
+  <Footer />
+
+  <script define:vars={{ title }}>
+    const bar = document.getElementById('progress-bar');
+    const article = document.querySelector('article');
+    const nav = document.getElementById('site-nav');
+    const navTitle = document.getElementById('nav-title');
+    const heroImg = document.getElementById('hero-image');
+    let ticking = false;
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const sy = scrollY;
+
+        // Progress bar
+        if (article && bar) {
+          const rect = article.getBoundingClientRect();
+          const pct = Math.max(0, Math.min(100, (-rect.top) / (rect.height - innerHeight) * 100));
+          bar.style.width = pct + '%';
+        }
+
+        // Nav reveal
+        if (nav) {
+          const show = sy > innerHeight * 0.75;
+          nav.style.opacity = show ? '1' : '0';
+          nav.style.pointerEvents = show ? 'auto' : 'none';
+          nav.classList.toggle('nav-scrolled', show);
+        }
+
+        if (navTitle) {
+          navTitle.textContent = sy > innerHeight ? title : '';
+        }
+
+        // Subtle hero parallax (respects reduced motion)
+        if (heroImg && sy < innerHeight * 1.5 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          heroImg.style.transform = `scale(1.05) translateY(${sy * 0.08}px)`;
+        }
+
+        ticking = false;
+      });
+    }
+
+    addEventListener('scroll', onScroll, { passive: true });
+
+    // Scroll reveal for elements
+    const reveals = document.querySelectorAll('.reveal, .stagger-reveal');
+    if (reveals.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => observer.observe(el));
+    }
+  </script>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  sublabel?: string;
+}
+
+const { value, label, sublabel } = Astro.props;
+---
+
+<div class="my-28 reveal">
+  <div class="full-bleed">
+    <div class="relative py-24 overflow-hidden">
+      <div class="max-w-[var(--measure-wide)] mx-auto px-6 text-center relative">
+        <!-- Top rule -->
+        <div class="mx-auto w-28 h-[1.5px] bg-gradient-to-r from-transparent via-rule to-transparent mb-16"></div>
+
+        <span class="block text-[clamp(5rem, 15vw, 12rem)] font-extralight tracking-[-0.06em] leading-[0.75] text-accent-warm tabular-nums" style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;">
+          {value}
+        </span>
+        <span class="block mt-8 font-sans text-[0.875rem] font-semibold tracking-[0.12em] uppercase text-ink-secondary">
+          {label}
+        </span>
+        {sublabel && (
+          <span class="block mt-4 font-serif text-[0.9375rem] font-light italic text-ink-tertiary max-w-lg mx-auto leading-relaxed" style="text-wrap: pretty;">
+            {sublabel}
+          </span>
+        )}
+
+        <!-- Bottom rule -->
+        <div class="mx-auto w-28 h-[1.5px] bg-gradient-to-r from-transparent via-rule to-transparent mt-16"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+[
+  { "label": "Crude oil", "value": 38 },
+  { "label": "LPG", "value": 29 },
+  { "label": "LNG", "value": 19 },
+  { "label": "Refined products", "value": 19 },
+  { "label": "Chemicals & fertilizers", "value": 13 },
+  { "label": "Container", "value": 2.8 },
+  { "label": "Dry bulk", "value": 2.4 }
+]

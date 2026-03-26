@@ -1,0 +1,37 @@
+{
+  "title": "Who is most exposed to this crisis?",
+  "subtitle": "Oil & gas shock sensitivity and insulation factors by country",
+  "source": "Energy Institute, EIA, IEA, IEEFA, OEC, Vortexa, Bloomberg, JP Morgan Asset Management, 2025",
+  "editorialPoint": "The countries most exposed are not always the ones you expect. China is heavily insulated by coal and renewables. Italy, Japan, South Korea, Singapore and Greece are among the most vulnerable developed economies.",
+  "columns": [
+    "Country",
+    "Share of global useful final energy (%)",
+    "Hormuz oil & gas as % of primary energy",
+    "Oil import share of primary energy (%)",
+    "Gas import share of primary energy (%)",
+    "Total oil+gas consumption as % of primary energy",
+    "Domestic gas production (%)",
+    "Domestic coal production (%)",
+    "Nuclear (%)",
+    "Renewable (%)",
+    "Total insulation factor (%)",
+    "YTD equity market return (%)"
+  ],
+  "data": [
+    { "country": "China", "ufePct": 29.2, "hormuzPct": 7, "oilImport": 13, "gasImport": 4, "oilGas": 22, "domesticGas": 7, "coal": 54, "nuclear": 2, "renewable": 13, "insulation": 76, "equityYtd": -1 },
+    { "country": "United States", "ufePct": 14.8, "hormuzPct": 1, "oilImport": -2, "gasImport": -5, "oilGas": 38, "domesticGas": 47, "coal": 8, "nuclear": 6, "renewable": 9, "insulation": 70, "equityYtd": -4 },
+    { "country": "India", "ufePct": 6.7, "hormuzPct": 13, "oilImport": 23, "gasImport": 3, "oilGas": 30, "domesticGas": 4, "coal": 44, "nuclear": 1, "renewable": 7, "insulation": 56, "equityYtd": -7 },
+    { "country": "Japan", "ufePct": 2.8, "hormuzPct": 21, "oilImport": 36, "gasImport": 19, "oilGas": 56, "domesticGas": 0, "coal": 0, "nuclear": 3, "renewable": 9, "insulation": 13, "equityYtd": -4 },
+    { "country": "South Korea", "ufePct": 2.2, "hormuzPct": 33, "oilImport": 40, "gasImport": 18, "oilGas": 60, "domesticGas": 0, "coal": 0, "nuclear": 9, "renewable": 3, "insulation": 13, "equityYtd": -6 },
+    { "country": "Germany", "ufePct": 1.9, "hormuzPct": null, "oilImport": 35, "gasImport": 23, "oilGas": 60, "domesticGas": 2, "coal": 7, "nuclear": 0, "renewable": 17, "insulation": 26, "equityYtd": -7 },
+    { "country": "Indonesia", "ufePct": 1.7, "hormuzPct": 1, "oilImport": 16, "gasImport": -8, "oilGas": 29, "domesticGas": 22, "coal": 48, "nuclear": 0, "renewable": 7, "insulation": 77, "equityYtd": -15 },
+    { "country": "Turkey", "ufePct": 1.2, "hormuzPct": null, "oilImport": 31, "gasImport": 24, "oilGas": 56, "domesticGas": 0, "coal": 10, "nuclear": 0, "renewable": 15, "insulation": 25, "equityYtd": -4 },
+    { "country": "Italy", "ufePct": 1.0, "hormuzPct": 9, "oilImport": 38, "gasImport": 33, "oilGas": 75, "domesticGas": 2, "coal": 0, "nuclear": 0, "renewable": 16, "insulation": 18, "equityYtd": -6 },
+    { "country": "Thailand", "ufePct": 0.9, "hormuzPct": 27, "oilImport": 34, "gasImport": 14, "oilGas": 60, "domesticGas": 23, "coal": 3, "nuclear": 0, "renewable": 5, "insulation": 31, "equityYtd": -7 },
+    { "country": "Taiwan", "ufePct": 0.8, "hormuzPct": 27, "oilImport": 34, "gasImport": 24, "oilGas": 59, "domesticGas": 0, "coal": 0, "nuclear": 2, "renewable": 5, "insulation": 6, "equityYtd": -4 },
+    { "country": "Singapore", "ufePct": 0.5, "hormuzPct": 26, "oilImport": 86, "gasImport": 12, "oilGas": 99, "domesticGas": 0, "coal": 0, "nuclear": 0, "renewable": 1, "insulation": 1, "equityYtd": -2 },
+    { "country": "Pakistan", "ufePct": 0.5, "hormuzPct": 25, "oilImport": 25, "gasImport": 12, "oilGas": 38, "domesticGas": 40, "coal": 12, "nuclear": 5, "renewable": 9, "insulation": 65, "equityYtd": -10 },
+    { "country": "Greece", "ufePct": 0.2, "hormuzPct": 56, "oilImport": 53, "gasImport": 21, "oilGas": 75, "domesticGas": 0, "coal": 3, "nuclear": 0, "renewable": 8, "insulation": 20, "equityYtd": -15 }
+  ],
+  "note": "Insulation factor = domestic gas + coal + nuclear + renewables as % of useful final energy. Higher = more insulated. Countries like China (76%) and US (70%) are well-buffered. Singapore (1%), Taiwan (6%), and South Korea (13%) have almost no insulation."
+}

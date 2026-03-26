@@ -1,0 +1,31 @@
+{
+  "title": "Three-quarters of the world's population depends on imported fossil fuels",
+  "subtitle": "Fossil net imports as a share of primary energy demand, 2023, %",
+  "source": "IEA WEB, Ember analysis, 2025",
+  "editorialPoint": "50 countries import more than half their primary energy as fossil fuels. The fossil fuel import bill was $1.7 trillion in 2024. Every $10/barrel oil price increase adds $160 billion to that bill.",
+  "highlights": [
+    { "country": "Japan", "pct": 84, "region": "Asia" },
+    { "country": "South Korea", "pct": 80, "region": "Asia" },
+    { "country": "Turkey", "pct": 70, "region": "Europe" },
+    { "country": "Italy", "pct": 72, "region": "Europe" },
+    { "country": "Spain", "pct": 70, "region": "Europe" },
+    { "country": "Germany", "pct": 67, "region": "Europe" },
+    { "country": "Morocco", "pct": 89, "region": "Africa" },
+    { "country": "Cuba", "pct": 64, "region": "Americas" },
+    { "country": "Chile", "pct": 61, "region": "Americas" },
+    { "country": "Philippines", "pct": 55, "region": "Asia" },
+    { "country": "Thailand", "pct": 54, "region": "Asia" },
+    { "country": "France", "pct": 47, "region": "Europe" },
+    { "country": "India", "pct": 37, "region": "Asia" },
+    { "country": "UK", "pct": 37, "region": "Europe" },
+    { "country": "Pakistan", "pct": 31, "region": "Asia" },
+    { "country": "China", "pct": 24, "region": "Asia" }
+  ],
+  "keyStats": {
+    "countriesOver50pct": 50,
+    "shareOfGlobalPop": "75%",
+    "annualImportBill2024": "$1.7 trillion",
+    "costPer10dollarOilIncrease": "$160 billion/year",
+    "countriesOver3pctGDP": "92 countries (40% of world population)"
+  }
+}

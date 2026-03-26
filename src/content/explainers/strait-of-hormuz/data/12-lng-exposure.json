@@ -1,0 +1,20 @@
+{
+  "title": "LNG exposure is high and rising — especially in Asia",
+  "subtitle": "LNG imports as share of total primary energy supply, %",
+  "source": "Energy Institute, Ember analysis, 2025",
+  "editorialPoint": "Asian economies built their energy systems on the assumption that LNG would keep flowing through Hormuz. Taiwan, Japan, and South Korea have the highest exposure — and the fewest alternatives.",
+  "data": [
+    { "country": "Taiwan", "before2022": 20, "y2021": 22, "y2024": 24, "note": "Most exposed economy in the world" },
+    { "country": "Japan", "before2022": 18, "y2021": 19, "y2024": 20, "note": "Second largest LNG importer globally" },
+    { "country": "Kuwait", "before2022": 5, "y2021": 8, "y2024": 18, "note": "Rapid increase in LNG dependency" },
+    { "country": "South Korea", "before2022": 14, "y2021": 15, "y2024": 17, "note": "Third largest LNG importer" },
+    { "country": "Pakistan", "before2022": 2, "y2021": 7, "y2024": 10, "note": "Fastest growing dependency" },
+    { "country": "Spain", "before2022": 7, "y2021": 8, "y2024": 9, "note": "Increased after cutting Russian gas" },
+    { "country": "Belgium", "before2022": 5, "y2021": 7, "y2024": 9, "note": "European hub" },
+    { "country": "Thailand", "before2022": 3, "y2021": 5, "y2024": 8, "note": "Growing dependency" },
+    { "country": "France", "before2022": 4, "y2021": 5, "y2024": 7, "note": "Nuclear insulates partly" },
+    { "country": "Italy", "before2022": 3, "y2021": 4, "y2024": 6, "note": "Switched from Russian pipeline gas" },
+    { "country": "Singapore", "before2022": 3, "y2021": 4, "y2024": 5, "note": "Nearly 100% fossil fuel dependent" }
+  ],
+  "note": "In at least nine countries, LNG imports make up over 10% of total energy supply. After the 2022 Ukraine crisis, European countries increased LNG imports to replace Russian pipeline gas — raising their exposure to the next shock. That shock is now here."
+}

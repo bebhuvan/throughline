@@ -1,0 +1,12 @@
+---
+interface Props {
+  id?: string;
+}
+
+const { id } = Astro.props;
+---
+<div class="tinted-section tinted-section--alt" id={id}>
+  <div class="relative max-w-[var(--measure-wide)] mx-auto">
+    <slot />
+  </div>
+</div>

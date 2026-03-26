@@ -1,0 +1,18 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label } = Astro.props;
+---
+
+<div class="my-28 flex flex-col items-center gap-4 reveal">
+  <div class="w-[6px] h-[6px] bg-accent/50 rounded-full"></div>
+  <div class="flex items-center gap-6 w-full max-w-xs">
+    <span class="flex-1 h-px bg-gradient-to-r from-transparent to-rule max-w-[120px] ml-auto"></span>
+    {label && (
+      <span class="font-sans text-[0.5625rem] font-bold tracking-[0.22em] uppercase text-accent shrink-0">{label}</span>
+    )}
+    <span class="flex-1 h-px bg-gradient-to-l from-transparent to-rule max-w-[120px] mr-auto"></span>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "title": "Fuel prices are rising everywhere — but not equally",
+  "subtitle": "Wholesale gasoline prices by region, index (100 = January 1, 2026)",
+  "source": "Bloomberg, JP Morgan Asset Management, March 23, 2026",
+  "editorialPoint": "India's wholesale gasoline price has risen more than Europe's or America's — showing how this crisis disproportionately hits import-dependent Asian economies",
+  "data": [
+    { "region": "Japan", "jan1": 100, "jan16": 102, "jan31": 98, "feb15": 103, "mar2": 145, "mar17": 205, "color": "#e45756" },
+    { "region": "India", "jan1": 100, "jan16": 101, "jan31": 97, "feb15": 102, "mar2": 140, "mar17": 195, "color": "#4c78a8" },
+    { "region": "Singapore", "jan1": 100, "jan16": 103, "jan31": 99, "feb15": 104, "mar2": 142, "mar17": 190, "color": "#f58518" },
+    { "region": "United States", "jan1": 100, "jan16": 100, "jan31": 96, "feb15": 101, "mar2": 130, "mar17": 175, "color": "#72b7b2" },
+    { "region": "Northwest Europe", "jan1": 100, "jan16": 101, "jan31": 97, "feb15": 102, "mar2": 128, "mar17": 168, "color": "#54a24b" }
+  ],
+  "annotations": [
+    { "date": "feb28", "label": "US-Israel strikes on Iran", "type": "event" },
+    { "date": "mar4", "label": "IRGC declares strait 'closed'", "type": "event" }
+  ],
+  "note": "US prices rising less because domestic production buffers the shock. Asian economies — Japan, India, Singapore — bear the brunt because 80-84% of Hormuz crude is bound for Asia."
+}

@@ -1,0 +1,282 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Footer from '@/components/layout/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const allThroughlines = await getCollection('explainers');
+const published = allThroughlines
+  .filter((e) => e.data.status === 'published')
+  .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+
+const featured = published.find((e) => e.data.featured) || published[0];
+const recent = published.filter((e) => e.id !== featured?.id).slice(0, 6);
+---
+
+<BaseLayout title="Throughline — Visual stories about the forces reshaping the world">
+
+  <!-- ═══════════════════════════════════════
+       OPENING — warm, confident, with visual weight
+       ═══════════════════════════════════════ -->
+  <section class="min-h-[100svh] bg-paper relative flex flex-col overflow-hidden">
+
+    {/* Layered ambient glows — warm, organic */}
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-[15%] right-[8%] w-[600px] h-[600px] rounded-full bg-accent opacity-[0.025] blur-[140px]"></div>
+      <div class="absolute bottom-[20%] left-[15%] w-[400px] h-[400px] rounded-full opacity-[0.02] blur-[100px]" style="background: var(--color-viz-cyan);"></div>
+      <div class="absolute top-[60%] right-[30%] w-[300px] h-[300px] rounded-full opacity-[0.015] blur-[80px]" style="background: var(--color-viz-amber);"></div>
+    </div>
+
+    {/* Abstract editorial grid — gives visual gravity to the hero */}
+    <div class="absolute right-0 top-0 w-[55%] h-full pointer-events-none opacity-[0.04] hidden lg:block">
+      <svg viewBox="0 0 600 800" fill="none" class="w-full h-full" preserveAspectRatio="xMaxYMid slice">
+        {/* Grid of thin lines evoking data, trade routes, connections */}
+        <line x1="100" y1="0" x2="100" y2="800" stroke="currentColor" stroke-width="0.5" />
+        <line x1="200" y1="0" x2="200" y2="800" stroke="currentColor" stroke-width="0.5" />
+        <line x1="300" y1="0" x2="300" y2="800" stroke="currentColor" stroke-width="0.5" />
+        <line x1="400" y1="0" x2="400" y2="800" stroke="currentColor" stroke-width="0.5" />
+        <line x1="500" y1="0" x2="500" y2="800" stroke="currentColor" stroke-width="0.5" />
+        <line x1="0" y1="200" x2="600" y2="200" stroke="currentColor" stroke-width="0.5" />
+        <line x1="0" y1="400" x2="600" y2="400" stroke="currentColor" stroke-width="0.5" />
+        <line x1="0" y1="600" x2="600" y2="600" stroke="currentColor" stroke-width="0.5" />
+        {/* Diagonal emphasis — like a trade flow */}
+        <line x1="50" y1="100" x2="550" y2="700" stroke="var(--color-accent)" stroke-width="1" opacity="0.15" />
+        <line x1="100" y1="80" x2="520" y2="650" stroke="var(--color-accent)" stroke-width="0.5" opacity="0.1" />
+        {/* Accent circles — chokepoints */}
+        <circle cx="300" cy="400" r="40" stroke="var(--color-accent)" stroke-width="1" fill="none" opacity="0.08" />
+        <circle cx="300" cy="400" r="4" fill="var(--color-accent)" opacity="0.12" />
+        <circle cx="200" cy="300" r="20" stroke="var(--color-accent)" stroke-width="0.5" fill="none" opacity="0.06" />
+        <circle cx="420" cy="520" r="25" stroke="var(--color-accent)" stroke-width="0.5" fill="none" opacity="0.06" />
+      </svg>
+    </div>
+
+    {/* Nav */}
+    <header class="relative z-10">
+      <div class="max-w-[1200px] mx-auto px-6 pt-10 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-6 h-6 border border-rule rounded flex items-center justify-center">
+            <span class="block w-2.5 h-[2px] bg-accent"></span>
+          </div>
+          <span class="font-sans text-[0.6875rem] font-bold tracking-[0.3em] uppercase text-ink-faint">Throughline</span>
+        </div>
+        <nav class="flex items-center gap-6">
+          <a href="/archive" class="font-sans text-[0.75rem] font-medium text-ink-faint hover:text-ink-secondary transition-colors">Archive</a>
+          <a href="/about" class="font-sans text-[0.75rem] font-medium text-ink-faint hover:text-ink-secondary transition-colors">About</a>
+          <a href="/feed.xml" class="text-ink-faint hover:text-accent transition-colors" aria-label="RSS Feed">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    {/* Pitch */}
+    <div class="relative z-10 flex-1 flex items-center">
+      <div class="max-w-[1200px] mx-auto px-6 w-full py-20">
+        <div class="max-w-3xl">
+          <div class="ornament-rule mb-8 fade-up"></div>
+          <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.02] tracking-[-0.035em] text-ink fade-up fade-up-delay-1" style="font-family: var(--font-display); text-wrap: balance; font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;">
+            Visual stories for a complicated world
+          </h1>
+          <p class="mt-9 font-serif text-[1.1875rem] font-light leading-[1.8] text-ink-secondary max-w-xl fade-up fade-up-delay-2" style="text-wrap: pretty;">
+            We publish data-driven, editorially serious stories about the developments that reshape daily life — the second and third-order consequences that connect a geopolitical shock to the price of groceries, fuel, and everything in between. Built on primary sources. Told through charts, maps, and narrative.
+          </p>
+
+          {/* Key stat teaser — gives the hero visual weight */}
+          <div class="mt-14 flex items-start gap-10 md:gap-14 fade-up fade-up-delay-3">
+            <div>
+              <p class="font-mono text-[0.5625rem] font-bold tracking-[0.15em] uppercase text-accent mb-2">Latest</p>
+              <p class="font-sans text-[0.8125rem] font-medium text-ink-secondary leading-snug max-w-[180px]">The Strait of Hormuz crisis and the price of everything</p>
+            </div>
+            <div class="hidden sm:block">
+              <p class="font-mono text-[0.5625rem] font-bold tracking-[0.15em] uppercase text-ink-faint mb-2">Key figure</p>
+              <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;" class="text-[2.25rem] font-light tracking-[-0.045em] text-accent leading-none">97%</p>
+              <p class="font-sans text-[0.6875rem] text-ink-faint mt-1.5">collapse in ship transits</p>
+            </div>
+            <div class="hidden md:block">
+              <p class="font-mono text-[0.5625rem] font-bold tracking-[0.15em] uppercase text-ink-faint mb-2">Oil peak</p>
+              <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;" class="text-[2.25rem] font-light tracking-[-0.045em] text-ink leading-none">$126</p>
+              <p class="font-sans text-[0.6875rem] text-ink-faint mt-1.5">Brent crude per barrel</p>
+            </div>
+          </div>
+
+          <div class="mt-14 flex items-center gap-5 fade-up fade-up-delay-4">
+            <span class="block w-10 h-px bg-rule"></span>
+            <span class="font-sans text-[0.625rem] tracking-[0.15em] text-ink-faint uppercase">Scroll to explore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FEATURED EXPLAINER — larger, more dramatic
+       ═══════════════════════════════════════ -->
+  {featured && (
+    <section class="bg-paper-warm border-t border-rule-light">
+      <div class="max-w-[1200px] mx-auto px-6 py-28 md:py-36">
+
+        {/* Section label */}
+        <div class="flex items-center gap-4 mb-16 fade-up">
+          <span class="block w-10 h-[2px] bg-accent"></span>
+          <span class="font-sans text-[0.5625rem] font-bold tracking-[0.25em] uppercase text-accent">Latest story</span>
+        </div>
+
+        {/* Feature card */}
+        <a href={`/stories/${featured.id}`} class="group block">
+          <div class="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-center">
+
+            {/* Image — larger, with shadow for depth */}
+            <div class="relative overflow-hidden rounded aspect-[16/11]" style="box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);">
+              {featured.data.heroImage ? (
+                <>
+                  <img
+                    src={featured.data.heroImage}
+                    alt={featured.data.heroAlt || featured.data.title}
+                    class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[1.2s] ease-out"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"></div>
+                </>
+              ) : (
+                <div class="w-full h-full bg-paper-alt flex items-center justify-center">
+                  <div class="text-center px-8">
+                    <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 72;" class="text-[clamp(3.5rem,9vw,6rem)] font-extralight tracking-[-0.05em] text-accent/10 leading-none">39km</p>
+                    <p class="font-sans text-[0.625rem] tracking-[0.2em] uppercase text-ink-faint mt-3">The chokepoint</p>
+                  </div>
+                </div>
+              )}
+              {/* Category pill */}
+              <div class="absolute top-5 left-5">
+                <span class="font-sans text-[0.5rem] font-bold tracking-[0.2em] uppercase bg-white/92 text-ink px-3.5 py-1.5 rounded-sm backdrop-blur-sm">{featured.data.category}</span>
+              </div>
+            </div>
+
+            {/* Text */}
+            <div>
+              <h2 class="text-[clamp(2rem,4.5vw,3.25rem)] font-light tracking-[-0.03em] leading-[1.05] text-ink group-hover:text-accent transition-colors duration-500" style="font-family: var(--font-display); text-wrap: balance; font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;">
+                {featured.data.title}
+              </h2>
+
+              {featured.data.subtitle && (
+                <p class="mt-7 font-serif text-[1.0625rem] font-light leading-[1.7] text-ink-tertiary max-w-lg" style="text-wrap: pretty;">
+                  {featured.data.subtitle}
+                </p>
+              )}
+
+              {/* Key stats preview */}
+              <div class="mt-10 grid grid-cols-3 gap-6 pt-8 border-t border-rule-light">
+                <div>
+                  <p class="font-mono text-[0.5rem] font-bold tracking-[0.15em] uppercase text-ink-faint mb-1">Oil transit</p>
+                  <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.625rem] font-light tracking-[-0.035em] text-ink leading-none">20.9M</p>
+                  <p class="font-sans text-[0.5625rem] text-ink-faint mt-0.5">bbl/day</p>
+                </div>
+                <div>
+                  <p class="font-mono text-[0.5rem] font-bold tracking-[0.15em] uppercase text-ink-faint mb-1">Collapse</p>
+                  <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.625rem] font-light tracking-[-0.035em] text-accent leading-none">97%</p>
+                  <p class="font-sans text-[0.5625rem] text-ink-faint mt-0.5">in 8 days</p>
+                </div>
+                <div>
+                  <p class="font-mono text-[0.5rem] font-bold tracking-[0.15em] uppercase text-ink-faint mb-1">Brent peak</p>
+                  <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.625rem] font-light tracking-[-0.035em] text-ink leading-none">$126</p>
+                  <p class="font-sans text-[0.5625rem] text-ink-faint mt-0.5">per barrel</p>
+                </div>
+              </div>
+
+              {/* Meta */}
+              <div class="mt-8 flex flex-wrap items-center gap-5">
+                <time class="font-sans text-[0.625rem] text-ink-faint" datetime={featured.data.publishedAt.toISOString()}>
+                  {featured.data.publishedAt.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                </time>
+                {featured.data.readingTime && (
+                  <>
+                    <span class="block w-3 h-px bg-rule"></span>
+                    <span class="font-sans text-[0.625rem] text-ink-faint">{featured.data.readingTime} min read</span>
+                  </>
+                )}
+              </div>
+
+              {/* CTA */}
+              <div class="mt-8 flex items-center gap-3">
+                <span class="font-sans text-[0.75rem] font-semibold text-accent group-hover:tracking-wide transition-all duration-500">Read the story</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="text-accent group-hover:translate-x-2 transition-transform duration-500">
+                  <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </a>
+
+      </div>
+    </section>
+  )}
+
+  <!-- ═══════════════════════════════════════
+       WHAT WE DO — editorial statement with ornaments
+       ═══════════════════════════════════════ -->
+  <section class="bg-paper relative">
+    <div class="max-w-[1200px] mx-auto px-6 py-24 md:py-32">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="flex items-center justify-center gap-4 mb-10">
+          <span class="block w-10 h-px bg-gradient-to-r from-transparent to-rule"></span>
+          <span class="block w-[5px] h-[5px] bg-accent rounded-full"></span>
+          <span class="block w-10 h-px bg-gradient-to-l from-transparent to-rule"></span>
+        </div>
+        <p class="text-[clamp(1.25rem,2.4vw,1.5625rem)] font-light leading-[1.72] text-ink-secondary" style="font-family: var(--font-display); text-wrap: pretty; font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 24;">
+          We publish visual stories about the forces most people underestimate. The second and third-order effects that connect a geopolitical crisis to your daily life — traced through data, maps, and charts.
+        </p>
+        <div class="mt-12 flex items-center justify-center gap-6">
+          <span class="block w-14 h-px bg-rule"></span>
+          <span class="font-sans text-[0.5rem] font-semibold tracking-[0.28em] uppercase text-ink-faint">Data-driven. Editorially serious.</span>
+          <span class="block w-14 h-px bg-rule"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MORE EXPLAINERS
+       ═══════════════════════════════════════ -->
+  {recent.length > 0 && (
+    <section class="bg-paper-warm border-t border-rule-light">
+      <div class="max-w-[1200px] mx-auto px-6 py-24 md:py-32">
+        <div class="flex items-center gap-4 mb-16">
+          <span class="block w-6 h-[2px] bg-rule"></span>
+          <span class="font-sans text-[0.5625rem] font-bold tracking-[0.25em] uppercase text-ink-faint">More stories</span>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+          {recent.map((explainer) => (
+            <a href={`/stories/${explainer.id}`} class="group block">
+              <div class="h-[3px] bg-accent mb-6 origin-left group-hover:scale-x-100 scale-x-[0.12] transition-transform duration-700 ease-out"></div>
+              <span class="font-sans text-[0.5rem] font-bold tracking-[0.2em] uppercase text-accent">{explainer.data.category}</span>
+              <h3 class="mt-3 text-[1.375rem] font-light tracking-[-0.02em] leading-[1.18] group-hover:text-accent transition-colors duration-300" style="font-family: var(--font-display); text-wrap: balance; font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 24;">
+                {explainer.data.title}
+              </h3>
+              {explainer.data.subtitle && (
+                <p class="mt-4 font-serif text-[0.9375rem] font-light text-ink-tertiary leading-[1.6] line-clamp-3">
+                  {explainer.data.subtitle}
+                </p>
+              )}
+              <div class="mt-5 flex items-center gap-4">
+                <time class="font-sans text-[0.5625rem] text-ink-faint">
+                  {explainer.data.publishedAt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                </time>
+                {explainer.data.readingTime && (
+                  <>
+                    <span class="block w-2 h-px bg-rule"></span>
+                    <span class="font-sans text-[0.5625rem] text-ink-faint">{explainer.data.readingTime} min</span>
+                  </>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Footer />
+
+</BaseLayout>

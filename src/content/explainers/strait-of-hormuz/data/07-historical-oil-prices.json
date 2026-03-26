@@ -1,0 +1,23 @@
+{
+  "title": "160 years of oil prices — and every crisis that moved them",
+  "subtitle": "Crude oil prices, $2014/barrel, 1861-2026",
+  "source": "Bloomberg, BP, Federal Reserve, Haver Analytics, Goldman Sachs GIR",
+  "editorialPoint": "The 2026 Hormuz crisis has driven oil prices higher faster than any previous shock — but the world is also less energy-intensive than during any previous crisis",
+  "annotations": [
+    { "year": 1862, "label": "US Civil War drives up commodity prices", "price": 110 },
+    { "year": 1894, "label": "Cholera epidemic; Baku cuts production", "price": 30 },
+    { "year": 1920, "label": "Automobile adoption drives demand", "price": 40 },
+    { "year": 1931, "label": "Great Depression crushes demand", "price": 12 },
+    { "year": 1947, "label": "Post-war auto boom creates fuel shortages", "price": 28 },
+    { "year": 1973, "label": "Arab oil embargo after Yom Kippur War", "price": 55 },
+    { "year": 1979, "label": "Iranian Revolution; Iraq War begins", "price": 115 },
+    { "year": 1990, "label": "Iraq invades Kuwait", "price": 50 },
+    { "year": 2008, "label": "Demand surge, speculation, Middle East tensions", "price": 140 },
+    { "year": 2011, "label": "Arab Spring disrupts output", "price": 120 },
+    { "year": 2014, "label": "Global oversupply; shale revolution", "price": 55 },
+    { "year": 2020, "label": "Covid-19 demand collapse", "price": 20 },
+    { "year": 2022, "label": "Russia invades Ukraine", "price": 120 },
+    { "year": 2026, "label": "Hormuz closure — largest supply shock in history", "price": 126 }
+  ],
+  "note": "The 2026 crisis represents ~20% of global supply disrupted — 3-5x larger than any previous shock. But oil intensity per dollar of GDP has halved since 1973, meaning the GDP drag per dollar of price increase is smaller than in historical precedents."
+}

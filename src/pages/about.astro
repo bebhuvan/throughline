@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Footer from '@/components/layout/Footer.astro';
+---
+
+<BaseLayout title="About — Throughline">
+
+  <!-- Nav -->
+  <header class="max-w-[1200px] mx-auto px-6 pt-10 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-6 h-6 border border-rule rounded flex items-center justify-center group-hover:border-accent/30 transition-colors">
+        <span class="block w-2.5 h-[2px] bg-accent"></span>
+      </div>
+      <span class="font-sans text-[0.6875rem] font-bold tracking-[0.3em] uppercase text-ink-faint group-hover:text-ink-tertiary transition-colors">Throughline</span>
+    </a>
+    <nav class="flex items-center gap-6">
+      <a href="/archive" class="font-sans text-[0.75rem] font-medium text-ink-faint hover:text-ink-secondary transition-colors">Archive</a>
+      <a href="/about" class="font-sans text-[0.75rem] font-medium text-ink-secondary">About</a>
+      <a href="/feed.xml" class="text-ink-faint hover:text-accent transition-colors" aria-label="RSS Feed">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" />
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <div class="max-w-[640px] mx-auto px-6 py-24 md:py-32">
+    <div class="ornament-rule mb-8"></div>
+
+    <h1 class="text-[clamp(2.25rem,5vw,3.5rem)] font-light tracking-[-0.03em] leading-[1.05]" style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;">
+      About
+    </h1>
+
+    <div class="mt-12 font-serif text-[1.0625rem] font-light leading-[1.8] text-ink-secondary space-y-7">
+      <p class="text-[1.25rem] leading-[1.75] text-ink font-normal" style="font-weight: 360;">
+        Throughline is a visual publication. We take developments that matter — in geopolitics, energy, trade, climate, technology — and build long-form, data-rich stories that show how they connect to everyday life.
+      </p>
+
+      <p>
+        The news tells you a crisis happened. A good analysis tells you why. We try to do something different: show you the chain of consequences that follows. How a disruption in one place becomes a price change in another. How a policy decision in a capital city arrives, months later, as a line item on a grocery bill. The connections are real, quantifiable, and almost always under-reported.
+      </p>
+
+      <p>
+        Each story is a single, scrollable experience — text, charts, maps, and illustrations woven together. We publish infrequently and take our time. There is no daily feed. When something goes up, it's because we think it's worth an hour of your attention.
+      </p>
+
+      <h2 class="!mt-20 text-[1.5rem] font-light tracking-[-0.02em] text-ink" style="font-family: var(--font-display); font-variation-settings: 'SOFT' 30, 'WONK' 0, 'opsz' 36;">
+        How we work
+      </h2>
+
+      <p>
+        Every story begins with primary sources — research from major institutions, government datasets, expert commentary — read in full before a word is written. We look for the facts that only surface when you cross-reference multiple sources: the detail in a Goldman Sachs footnote that contradicts the headline of a UN report, the trade data that explains why a price spike hit one country harder than another.
+      </p>
+
+      <p>
+        The writing aims for the standard of longform journalism. Named sources, not "analysts say." Specific numbers, not "significant impact." Human stakes early, not as an afterthought. Every section must advance the story. If it could be removed without the reader noticing, it doesn't survive editing.
+      </p>
+
+      <p>
+        The visualisations are not illustration — they carry editorial weight. Every chart has a point it's making. We annotate what matters, provide historical context where it sharpens the argument, and show how countries or regions diverge rather than presenting a single global average. If the data tells a different story at different scales, we show both.
+      </p>
+
+      <h2 class="!mt-20 text-[1.5rem] font-light tracking-[-0.02em] text-ink" style="font-family: var(--font-display); font-variation-settings: 'SOFT' 30, 'WONK' 0, 'opsz' 36;">
+        What we believe
+      </h2>
+
+      <p>
+        That complexity deserves better than bullet points. That you can take a subject as tangled as global supply chains or energy markets and make it clear without making it simple — if you're willing to use every tool available: language, data, design, and the reader's own intelligence.
+      </p>
+
+      <p>
+        That the best charts don't just display data. They make you feel the scale of something your mind would otherwise round down to an abstraction.
+      </p>
+
+      <p>
+        That good design is quiet. This site has no pop-ups, no tracking, no algorithmic feed. The typography is warm, the palette is unhurried, and the reading experience is the product. If the design is doing its job, you don't notice it — you just notice that the story is easy to follow.
+      </p>
+
+      <div class="!mt-20 pt-8 border-t border-rule-light">
+        <p class="font-sans text-[0.875rem] text-ink-tertiary leading-relaxed">
+          New stories publish when they're ready, not on a schedule. Subscribe via <a href="/feed.xml" class="text-accent hover:text-accent-warm transition-colors underline underline-offset-2 decoration-1">RSS</a> so you don't miss one.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+
+</BaseLayout>

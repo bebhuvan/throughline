@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+.wrangler/
+Hormuz/
+*.pdf
+Project Visual Explainer*.md

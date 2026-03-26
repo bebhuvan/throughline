@@ -1,0 +1,14 @@
+---
+interface Props {
+  source: string;
+  url?: string;
+  note?: string;
+}
+
+const { source, url, note } = Astro.props;
+---
+
+<p class="chart-source">
+  Source: {url ? <a href={url} target="_blank" rel="noopener noreferrer" class="underline hover:text-ink-secondary transition-colors">{source}</a> : source}
+  {note && <span class="text-ink-faint"> &mdash; {note}</span>}
+</p>

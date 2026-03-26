@@ -1,0 +1,22 @@
+---
+interface Props {
+  columns?: 2 | 3 | 4;
+}
+
+const { columns = 3 } = Astro.props;
+const gridClass = columns === 2
+  ? 'grid-cols-1 sm:grid-cols-2'
+  : columns === 4
+    ? 'grid-cols-2 md:grid-cols-4'
+    : 'grid-cols-1 sm:grid-cols-3';
+---
+
+<div class="breakout my-16 reveal">
+  <div class="relative">
+    <div class="h-[2px] bg-accent/35 mb-1"></div>
+    <div class={`grid ${gridClass} divide-x divide-rule-light/60`}>
+      <slot />
+    </div>
+    <div class="h-px bg-rule-light mt-1"></div>
+  </div>
+</div>

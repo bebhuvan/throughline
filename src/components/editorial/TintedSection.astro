@@ -1,0 +1,12 @@
+---
+interface Props {
+  variant?: 'warm' | 'alt' | 'rose' | 'cream';
+  id?: string;
+}
+const { variant = 'alt', id } = Astro.props;
+---
+<div class={`tinted-section tinted-section--${variant}`} id={id}>
+  <div class="relative max-w-[var(--measure-wide)] mx-auto">
+    <slot />
+  </div>
+</div>

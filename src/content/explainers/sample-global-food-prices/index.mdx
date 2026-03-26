@@ -1,0 +1,113 @@
+---
+title: "The Hidden Geography of Your Grocery Bill"
+subtitle: "How disruptions thousands of miles away quietly reshape what you pay for food"
+description: "A visual explainer on how global supply chain disruptions, energy costs, and fertilizer shortages cascade into higher food prices — and who pays the steepest price."
+author: "Editorial"
+publishedAt: 2026-03-24
+category: "economics"
+tags: ["food prices", "supply chain", "fertilizer", "inflation"]
+featured: false
+readingTime: 8
+status: "published"
+---
+
+import { BarChart } from '@/components/viz/BarChart';
+import { LineChart } from '@/components/viz/LineChart';
+import StatRow from '@/components/editorial/StatRow.astro';
+import StatCard from '@/components/editorial/StatCard.astro';
+import Callout from '@/components/editorial/Callout.astro';
+import KeyInsight from '@/components/editorial/KeyInsight.astro';
+import PullQuote from '@/components/editorial/PullQuote.astro';
+import Timeline from '@/components/editorial/Timeline.astro';
+import Breakout from '@/components/layout/Breakout.astro';
+
+When you pick up a bag of rice or a carton of eggs at your local supermarket, the price on the sticker feels like a local fact. But it isn't. That number is the endpoint of a chain of events that stretches across oceans, through chokepoints, and into the geopolitics of energy and fertilizer.
+
+In the past two years, a series of disruptions — some sudden, some slow-building — have pushed global food prices into territory that is quietly punishing the world's most vulnerable populations.
+
+<StatRow>
+  <StatCard value="23%" label="Global food price increase" change="since 2023" changeDirection="up" />
+  <StatCard value="735M" label="People facing food insecurity" change="+122M" changeDirection="up" />
+  <StatCard value="3x" label="Fertilizer cost multiplier" change="vs. 2020 baseline" changeDirection="up" />
+</StatRow>
+
+## The fertilizer bottleneck
+
+Most people understand that when oil prices rise, transport costs go up, and food gets more expensive. That is the first-order effect.
+
+But the second-order effect is less visible and more consequential: **fertilizer**.
+
+Natural gas is the primary feedstock for nitrogen-based fertilizers, which account for roughly half of the world's food production capacity. When gas prices spike — whether from sanctions, supply disruptions, or geopolitical conflict — the cost of fertilizer follows within weeks.
+
+<BarChart
+  client:visible
+  data={[
+    { label: "Urea", value: 340 },
+    { label: "DAP", value: 520 },
+    { label: "Potash", value: 290 },
+    { label: "MAP", value: 480 },
+    { label: "Ammonia", value: 610 }
+  ]}
+  title="Global fertilizer prices (USD per metric ton)"
+  subtitle="Selected fertilizer types, Q1 2026"
+  source="World Bank Commodity Markets"
+  horizontal
+  barColor="var(--color-viz-amber)"
+/>
+
+The price of fertilizer doesn't just affect industrial farming. It reshapes the economics of subsistence agriculture in South Asia, sub-Saharan Africa, and parts of Latin America — where smallholder farmers often cannot afford to buy fertilizer at all when prices double.
+
+<Callout type="insight" title="The fertilizer-food lag">
+  A spike in fertilizer prices takes 3 to 6 months to show up in food prices. The lag creates a false sense of calm — by the time consumers notice, the damage is already locked in for the next growing season.
+</Callout>
+
+## Who pays the steepest price?
+
+Food price inflation is not distributed equally. In wealthier countries, food accounts for roughly 10–15% of household spending. In low-income countries, that figure is often 40–60%.
+
+<BarChart
+  client:visible
+  data={[
+    { label: "United States", value: 11 },
+    { label: "Germany", value: 14 },
+    { label: "Brazil", value: 22 },
+    { label: "India", value: 39 },
+    { label: "Nigeria", value: 56 },
+    { label: "Ethiopia", value: 62 }
+  ]}
+  title="Share of household income spent on food (%)"
+  subtitle="Selected countries, 2025 estimates"
+  source="USDA Economic Research Service"
+  horizontal
+  barColor="var(--color-viz-red)"
+/>
+
+This means a 20% increase in food costs is an inconvenience in Berlin but a crisis in Lagos. The asymmetry is stark, and it is one of the most underappreciated dimensions of global supply chain disruptions.
+
+<KeyInsight>
+  A disruption at a single chokepoint — a strait, a pipeline, a port — can alter the food security of millions of people who have never heard of it and have no power to respond to it.
+</KeyInsight>
+
+## The timeline of compounding shocks
+
+What makes the current moment especially dangerous is not any single disruption but the compounding effect of several happening in sequence.
+
+<Timeline events={[
+  { date: "Early 2024", title: "Red Sea shipping disruptions", description: "Houthi attacks force rerouting around the Cape of Good Hope, adding 10-14 days to Asia-Europe shipping." },
+  { date: "Mid 2024", title: "El Nino crop failures", description: "Below-average harvests in Southeast Asia and Southern Africa reduce global grain reserves." },
+  { date: "Late 2024", title: "Natural gas price surge", description: "European and Asian gas prices spike 40%, driving fertilizer costs to multi-year highs." },
+  { date: "Q1 2025", title: "Hormuz strait tensions", description: "Geopolitical tensions around the Strait of Hormuz raise insurance premiums on Gulf energy shipments." },
+  { date: "2025-2026", title: "Cumulative food inflation", description: "Global food prices reach levels not seen since the 2022 crisis, with disproportionate impact on import-dependent nations." }
+]} />
+
+<PullQuote attribution="World Food Programme, March 2026">
+  We are witnessing a slow-motion crisis in which multiple shocks are layering on top of each other faster than the most vulnerable populations can absorb them.
+</PullQuote>
+
+## The road ahead
+
+There are no quick fixes. The interconnectedness that makes global food systems efficient also makes them fragile. Diversifying fertilizer supply chains, investing in regional food production, and building strategic food reserves are long-term projects — not emergency measures.
+
+But understanding the chain of causation — from a geopolitical event thousands of miles away to the price of bread at your local store — is the first step toward demanding better policy responses.
+
+The next time you notice food prices rising, look beyond the sticker. The explanation is rarely local.

@@ -1,0 +1,39 @@
+---
+interface Props {
+  type?: 'insight' | 'warning' | 'context';
+  title?: string;
+}
+
+const { type = 'context', title } = Astro.props;
+
+const config = {
+  insight: {
+    accent: 'var(--color-accent)',
+    labelColor: 'text-accent',
+    bg: 'bg-paper-rose/50',
+  },
+  warning: {
+    accent: 'var(--color-viz-amber)',
+    labelColor: 'text-viz-amber',
+    bg: 'bg-paper-cream/60',
+  },
+  context: {
+    accent: 'var(--color-viz-blue)',
+    labelColor: 'text-viz-blue',
+    bg: 'bg-paper-cream/40',
+  },
+}[type];
+---
+
+<aside class="my-16 relative reveal">
+  <div class={`${config.bg} rounded-r-md pl-5 pr-6 py-6 border-l-[3px]`} style={`border-left-color: ${config.accent};`}>
+    {title && (
+      <p class={`font-sans text-[0.6875rem] font-bold tracking-[0.12em] uppercase ${config.labelColor} mb-3`}>
+        {title}
+      </p>
+    )}
+    <div class="font-serif text-[0.9375rem] leading-[1.8] text-ink-secondary [&>p]:mb-3 [&>p:last-child]:mb-0">
+      <slot />
+    </div>
+  </div>
+</aside>

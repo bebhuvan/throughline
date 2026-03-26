@@ -1,0 +1,55 @@
+---
+interface TimelineEvent {
+  date: string;
+  title: string;
+  description?: string;
+  highlight?: boolean;
+}
+
+interface Props {
+  events: TimelineEvent[];
+}
+
+const { events } = Astro.props;
+---
+
+<div class="breakout my-20 reveal">
+  <div class="relative">
+    <!-- Vertical line -->
+    <div class="absolute left-[8px] top-4 bottom-4 w-px bg-accent/15"></div>
+
+    <div class="space-y-0">
+      {events.map((event) => (
+        <div class={`relative pl-10 pb-7 last:pb-0`}>
+          <!-- Timeline node -->
+          <div class="absolute left-0 top-[7px]">
+            {event.highlight ? (
+              <div class="w-[17px] h-[17px] rounded-full border-2 border-accent bg-paper flex items-center justify-center">
+                <div class="w-[5px] h-[5px] rounded-full bg-accent"></div>
+              </div>
+            ) : (
+              <div class="w-[17px] h-[17px] rounded-full border-[1.5px] border-rule bg-paper flex items-center justify-center">
+                <div class="w-[3px] h-[3px] rounded-full bg-rule"></div>
+              </div>
+            )}
+          </div>
+
+          <!-- Content -->
+          <div class={`${event.highlight ? 'border-l-2 border-accent/20 pl-4 -ml-1 py-1' : 'py-1'}`}>
+            <span class={`font-mono text-[0.8125rem] font-bold tabular-nums ${event.highlight ? 'text-accent' : 'text-ink-tertiary'}`}>
+              {event.date}
+            </span>
+            <h4 class={`mt-1 font-serif text-[1.0625rem] leading-[1.3] ${event.highlight ? 'font-medium text-ink' : 'font-normal text-ink-secondary'}`}>
+              {event.title}
+            </h4>
+            {event.description && (
+              <p class="mt-1.5 font-serif text-[0.9375rem] font-light text-ink-tertiary leading-relaxed max-w-lg">
+                {event.description}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

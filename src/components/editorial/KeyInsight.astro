@@ -1,0 +1,26 @@
+---
+interface Props {
+  label?: string;
+}
+
+const { label = 'Key insight' } = Astro.props;
+---
+
+<div class="my-28 relative reveal">
+  <div class="full-bleed">
+    <div class="max-w-xl mx-auto py-24 px-6 text-center">
+      <!-- Label -->
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <span class="block w-12 h-[2px] bg-gradient-to-r from-transparent to-accent/45 rounded-full"></span>
+        <span class="font-sans text-[0.5625rem] font-bold text-accent tracking-[0.22em] uppercase">{label}</span>
+        <span class="block w-12 h-[2px] bg-gradient-to-l from-transparent to-accent/45 rounded-full"></span>
+      </div>
+      <!-- Content -->
+      <p class="text-[1.625rem] md:text-[1.875rem] font-normal leading-[1.48] tracking-[-0.012em] text-ink" style="font-family: var(--font-serif); text-wrap: pretty;">
+        <slot />
+      </p>
+      <!-- Bottom ornament -->
+      <div class="mt-12 mx-auto w-7 h-[7px] bg-accent/55 rounded-full"></div>
+    </div>
+  </div>
+</div>

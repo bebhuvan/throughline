@@ -1,0 +1,616 @@
+---
+title: "The 39-Kilometre Chokepoint That Feeds the World"
+subtitle: "How a corridor of water narrower than a city boulevard carries one-fifth of all the oil the world burns — and what happens when it closes"
+description: "The Strait of Hormuz crisis of 2026: military strikes collapsed ship transits 97%, sent oil past $126, doubled marine fuel, and triggered a cascade from energy to fertilizer to food prices thousands of miles away."
+author: "Editorial"
+publishedAt: 2026-03-26
+updatedAt: 2026-03-26
+category: "geopolitics"
+tags: ["oil", "iran", "hormuz", "energy", "shipping", "food prices", "fertilizer"]
+heroImage: "/images/hormuz-hero.jpg"
+heroAlt: "The deck of an oil tanker crossing the Strait of Hormuz under grey skies"
+heroCaption: "Reuters"
+featured: true
+readingTime: 28
+status: "published"
+---
+
+{/* Existing chart components */}
+import { VLCCScaleIllustration } from '@/components/viz/VLCCScaleIllustration';
+import { StraitTacticalIllustration } from '@/components/viz/StraitTacticalIllustration';
+import { StraitCrossSectionIllustration } from '@/components/viz/StraitCrossSectionIllustration';
+import { CascadeChainIllustration } from '@/components/viz/CascadeChainIllustration';
+import { InsuranceCostIllustration } from '@/components/viz/InsuranceCostIllustration';
+import { PipelineBypassIllustration } from '@/components/viz/PipelineBypassIllustration';
+import { SelectiveClosureIllustration } from '@/components/viz/SelectiveClosureIllustration';
+import { TransitCollapseChart } from '@/components/viz/TransitCollapseChart';
+import { PriceCascadeChart } from '@/components/viz/PriceCascadeChart';
+import { ChokePointsChart } from '@/components/viz/ChokePointsChart';
+import { FertilizerVulnerabilityChart } from '@/components/viz/FertilizerVulnerabilityChart';
+import { BypassGapChart } from '@/components/viz/BypassGapChart';
+import { CommodityFlowChart } from '@/components/viz/CommodityFlowChart';
+import { HormuzMap } from '@/components/viz/HormuzMap';
+import { WorldChokePointsMap } from '@/components/viz/WorldChokePointsMap';
+import { CrisisScrolly } from '@/components/viz/CrisisScrolly';
+import { HistoricalShocksChart } from '@/components/viz/HistoricalShocksChart';
+import { VulnerabilityChart } from '@/components/viz/VulnerabilityChart';
+import { DesalinationChart } from '@/components/viz/DesalinationChart';
+import { OilFoodCorrelationChart } from '@/components/viz/OilFoodCorrelationChart';
+import { FuturesCurvesChart } from '@/components/viz/FuturesCurvesChart';
+import { GDPScenariosChart } from '@/components/viz/GDPScenariosChart';
+import { ChemicalCascadeChart } from '@/components/viz/ChemicalCascadeChart';
+import { IndiaImpactChart } from '@/components/viz/IndiaImpactChart';
+import { IndiaWalletImpact } from '@/components/viz/IndiaWalletImpact';
+import { GasolineByRegionChart } from '@/components/viz/GasolineByRegionChart';
+import { OilImportDependencyChart } from '@/components/viz/OilImportDependencyChart';
+import { SPRMarketReactionChart } from '@/components/viz/SPRMarketReactionChart';
+import { LNGExposureChart } from '@/components/viz/LNGExposureChart';
+import { GCCGDPHitChart } from '@/components/viz/GCCGDPHitChart';
+
+{/* Editorial components */}
+import StatRow from '@/components/editorial/StatRow.astro';
+import StatCard from '@/components/editorial/StatCard.astro';
+import Callout from '@/components/editorial/Callout.astro';
+import KeyInsight from '@/components/editorial/KeyInsight.astro';
+import PullQuote from '@/components/editorial/PullQuote.astro';
+import BigNumber from '@/components/editorial/BigNumber.astro';
+import TintedSection from '@/components/editorial/TintedSection.astro';
+import SectionDivider from '@/components/editorial/SectionDivider.astro';
+import Factoid from '@/components/editorial/Factoid.astro';
+
+{/* Layout components */}
+import Breakout from '@/components/layout/Breakout.astro';
+import FullBleed from '@/components/layout/FullBleed.astro';
+
+{/*
+  NEW CHARTS TO BUILD — data JSON files ready in ./data/:
+  - HistoricalOilPriceChart (07-historical-oil-prices.json)
+  - SensitivityHeatmap (08-sensitivity-heatmap.json)
+  - GasolineByRegionChart (09-gasoline-by-region.json)
+  - GCCGDPHitChart (10-gcc-gdp-hit.json)
+  - GeopoliticalRiskChart (11-geopolitical-risk-index.json)
+  - LNGExposureChart (12-lng-exposure.json)
+  - FossilDependencyMap (13-fossil-dependency-map.json)
+  - SPRMarketReactionChart (14-spr-market-reaction.json)
+  - OilImportDependencyChart (15-oil-import-dependency.json)
+  - SupplyShockComparisonChart (16-supply-shock-comparison.json)
+  - SelectiveClosureDiagram (illustration)
+  - BackstoryScrolly (scrollytelling)
+*/}
+
+On March 7, in a kitchen in south Delhi, Sunita Devi unscrewed the regulator from her LPG cylinder and found it empty. She called the distributor. Earliest delivery: eleven days. The price, when it arrived, would be 913 rupees — sixty more than last month. She switched to a kerosene stove she hadn't touched in years.
+
+Sunita does not know where the Strait of Hormuz is. She has no reason to. But ninety percent of India's imported cooking gas passes through that corridor of water — 39 kilometres wide, with shipping lanes narrower than Rajpath — between Iran and Oman. When it closed, her cylinder queue went from two days to eleven. The price hike started there, 3,500 kilometres from her kitchen, and arrived in less than a week.
+
+Half the crude oil that fills petrol pumps from Mumbai to Madurai has crossed the same passage. So has the natural gas that makes the urea a farmer in Bihar spreads on his wheat. So has the naphtha that becomes the plastic chair you are sitting on, the polyester in your shirt, the synthetic rubber in your car tyres.
+
+<StatRow>
+  <StatCard value="20.9M" label="barrels of oil transit daily" />
+  <StatCard value="97%" label="collapse in ship transits" change="141 to 4 ships per day" changeDirection="down" />
+  <StatCard value="$126" label="Brent crude peak" change="+74% from pre-crisis" changeDirection="up" />
+</StatRow>
+
+<SectionDivider label="The vital passage" />
+
+## A corridor narrower than a city boulevard
+
+The Strait of Hormuz runs 167 kilometres between Iran and Oman. At its narrowest, 39 kilometres of water separate the two coasts. But the navigable space is far smaller than that number suggests. Two shipping lanes, each 3.2 kilometres wide, separated by a 3.2-kilometre buffer. Total usable width: about 10 kilometres. Each lane spans roughly the distance from Connaught Place to India Gate in New Delhi.
+
+Through that width, in each direction, passes a quarter of the world's seaborne oil.
+
+A fully loaded VLCC supertanker — 330 metres long, 60 metres wide, drawing 22 metres of water — has almost no room to manoeuvre. The shallowest points near the Iranian coast drop to less than 25 metres. Dozens of these vessels are in the strait at any given hour, each carrying two million barrels of crude.
+
+<Breakout>
+  <VLCCScaleIllustration client:visible />
+</Breakout>
+
+The Iranian coastline rises steeply on the northern shore, bristling with missile batteries, radar stations, and fast-boat berths. Seven of the eight major islands in the strait are Iranian. The IRGC Navy's fast-attack craft — small, fast, hard to track on radar — are stationed minutes from the shipping lanes.
+
+<Callout type="context" title="Traffic separation scheme">
+  Ships follow a one-way Traffic Separation Scheme mandated by the International Maritime Organization. Inbound traffic runs along the Omani coast. Outbound runs along the Iranian coast. Between them: a 3.2 km buffer. There is no shortcut, no wider route, no alternative channel.
+</Callout>
+
+<Factoid label="History">
+  During the **Tanker War of 1981-88**, Iran mined the Strait of Hormuz, attacked 546 ships, and killed 430 sailors. In **April 1988**, the US destroyed two Iranian oil platforms and sank a frigate in the largest naval engagement since World War II. In **2019**, Iran's IRGC seized the British tanker *Stena Impero* and attacked six vessels near the strait. In **2024**, Houthi attacks at the Bab el-Mandeb strait — a far smaller chokepoint — cut transits 48% and pushed insurance costs up 500%. What happened at Hormuz made that look minor.
+</Factoid>
+
+<Breakout>
+  <HormuzMap client:visible />
+</Breakout>
+
+<SectionDivider label="What flows through" />
+
+## Far more than oil
+
+People call the Strait of Hormuz an oil chokepoint. That understates it badly.
+
+Yes, 20.9 million barrels of crude and refined products pass through every day — 38% of global seaborne crude trade. But so does 29% of the world's LPG. So does 19% of its liquefied natural gas. One-third of all seaborne fertilizer. Thirteen percent of globally shipped chemicals. The annual value of goods transiting this 10-kilometre channel exceeds $700 billion — more than India's entire defence, health, and education budgets combined.
+
+<Breakout>
+  <CommodityFlowChart client:visible />
+</Breakout>
+
+The Gulf region produces 43% of global urea exports, 44% of its sulfur, 27% of its ammonia, and 40% of its methanol. Qatar alone supplies 34% of the world's helium, a gas essential to MRI machines, semiconductor fabrication, and rocket propulsion. Strip away the oil entirely, and the Strait of Hormuz would still be one of the most critical waterways on Earth.
+
+Eighty-four percent of crude leaving the Gulf heads to Asia. China, India, Japan, and South Korea receive 74% of all Hormuz crude. Taiwan depends on LNG transiting the strait for 24% of its total energy supply. Japan: 20%. South Korea: 17%. These are not minor economic inputs. They are the foundations of industrial economies that manufacture the goods the rest of the world buys.
+
+<BigNumber value="$700B+" label="annual value of goods transiting Hormuz" sublabel="Oil, gas, fertilizer, chemicals, helium — through a channel narrower than some city highways" />
+
+<TintedSection variant="warm">
+  <div class="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+    <div>
+      <p class="font-sans text-[0.6875rem] font-bold tracking-[0.2em] uppercase text-accent mb-4">Where the oil goes</p>
+      <div class="space-y-5">
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="font-sans text-[0.9375rem] font-medium text-ink">Asia</span>
+            <span class="font-mono text-[0.9375rem] font-bold text-accent">84%</span>
+          </div>
+          <div class="h-2.5 bg-paper-alt rounded-full overflow-hidden"><div class="h-full bg-accent rounded-full" style="width: 84%"></div></div>
+        </div>
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="font-sans text-[0.9375rem] font-medium text-ink-tertiary">Europe</span>
+            <span class="font-mono text-[0.9375rem] font-medium text-ink-faint">5%</span>
+          </div>
+          <div class="h-2.5 bg-paper-alt rounded-full overflow-hidden"><div class="h-full bg-viz-amber rounded-full" style="width: 5%"></div></div>
+        </div>
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="font-sans text-[0.9375rem] font-medium text-ink-tertiary">Other</span>
+            <span class="font-mono text-[0.9375rem] font-medium text-ink-faint">11%</span>
+          </div>
+          <div class="h-2.5 bg-paper-alt rounded-full overflow-hidden"><div class="h-full bg-rule rounded-full" style="width: 11%"></div></div>
+        </div>
+      </div>
+      <p class="mt-5 font-sans text-[0.75rem] text-ink-faint">14.3 million barrels of crude per day. Source: UNCTAD / U.S. EIA (2025)</p>
+    </div>
+    <div>
+      <p class="font-sans text-[0.6875rem] font-bold tracking-[0.2em] uppercase text-viz-cyan mb-4">Where the LNG goes</p>
+      <div class="space-y-5">
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="font-sans text-[0.9375rem] font-medium text-ink">Asia</span>
+            <span class="font-mono text-[0.9375rem] font-bold text-viz-cyan">83%</span>
+          </div>
+          <div class="h-2.5 bg-paper-alt rounded-full overflow-hidden"><div class="h-full bg-viz-cyan rounded-full" style="width: 83%"></div></div>
+        </div>
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="font-sans text-[0.9375rem] font-medium text-ink-tertiary">Europe</span>
+            <span class="font-mono text-[0.9375rem] font-medium text-ink-faint">13%</span>
+          </div>
+          <div class="h-2.5 bg-paper-alt rounded-full overflow-hidden"><div class="h-full bg-viz-amber rounded-full" style="width: 13%"></div></div>
+        </div>
+        <div>
+          <div class="flex items-baseline justify-between mb-1">
+            <span class="font-sans text-[0.9375rem] font-medium text-ink-tertiary">Other</span>
+            <span class="font-mono text-[0.9375rem] font-medium text-ink-faint">4%</span>
+          </div>
+          <div class="h-2.5 bg-paper-alt rounded-full overflow-hidden"><div class="h-full bg-rule rounded-full" style="width: 4%"></div></div>
+        </div>
+      </div>
+      <p class="mt-5 font-sans text-[0.75rem] text-ink-faint">10.4 billion cubic feet per day. Source: UNCTAD / U.S. EIA (2025)</p>
+    </div>
+  </div>
+</TintedSection>
+
+<SectionDivider label="The backstory" />
+
+## How we got here
+
+In June 2025, a twelve-day conflict between Israel, the US, and Iran ended in a ceasefire. Joint strikes obliterated much of Iran's nuclear programme and degraded its air defences. But the aftermath ate at Iran's leadership. They felt they had conceded too quickly — signalling weakness to their domestic base and to the proxy networks that depend on Tehran's willingness to fight. Intelligence assessments suggested Iran had begun quietly reconstituting its nuclear weapons programme.
+
+The US and Israel saw both a threat and an opening. Iran's air defences were still weak. On February 28, 2026, they launched Operation Epic Fury — coordinated strikes against IRGC headquarters, ballistic missile sites, naval vessels, air defences, and nuclear facilities. The Supreme Leader, Ayatollah Ali Khamenei, was killed. So was Ali Larijani, the former Speaker of Parliament — the one figure with relationships across every faction of the Iranian regime.
+
+<PullQuote attribution="Sanam Vakil, Director of Middle East and North Africa Programme, Chatham House">
+  Tehran sees the US and Israel as waging a regime change war. What remains of the Iranian regime is fighting for its very survival. Until Iran sees a credible path to guarantees for the Islamic Republic's longer-term survival, it has little incentive to end this war.
+</PullQuote>
+
+Mojtaba Khamenei, the Supreme Leader's son, was appointed as successor. The appointment was symbolic — he lacks religious credentials, political authority, and the trust of Iran's fragmented factions. The real decisions shifted to the IRGC, operating through a decentralised mosaic of regional commanders.
+
+<Breakout>
+  <StraitCrossSectionIllustration client:visible />
+</Breakout>
+
+<Breakout>
+  <StraitTacticalIllustration client:visible />
+</Breakout>
+
+Iran's response was asymmetric and calculated. On day one, 1,000 missiles were launched. By mid-March, the rate had dropped to several dozen per day — not because Iran was running out, but because it was pacing itself. Low-cost drones, fast boats, naval mines, and coastal missiles are cheap to deploy and expensive to counter. The US Navy sank or damaged almost every Iranian Navy vessel. But Iran's ability to threaten the strait was never concentrated in its navy. It was distributed across islands, coastal batteries, and thousands of IRGC fast boats.
+
+What surprised analysts was Iran's willingness to attack Gulf civilian infrastructure — oil refineries, airports, desalination plants, AI data centres in the UAE and Qatar — to pressure Gulf states into pressuring Washington to stop.
+
+<PullQuote attribution="Ambassador Dennis Ross, Washington Institute for Near East Policy">
+  The key to the US being able to walk away is the Strait of Hormuz. On his own, Trump probably would have already declared victory. But he can't say he's won and stop as long as Iran controls who can and can't export oil and sail through the Strait.
+</PullQuote>
+
+<Factoid label="The mediator gap">
+  Ali Larijani had relationships across every regime faction — reformists, hardliners, IRGC commanders. Dennis Ross: "If anyone could orchestrate a move to end the war through mediation, it would have been him." His death in the initial strikes left a vacuum. President Pezeshkian lacks credibility with the IRGC. Mojtaba Khamenei lacks credibility with everyone. Russia might mediate, but the conditions for talks do not yet exist.
+</Factoid>
+
+<SectionDivider label="The crisis" />
+
+## Eight days that shut down global shipping
+
+Previous Hormuz crises gave warning. Ships were harassed, then threatened, then attacked — over weeks or months. In 2019, six tankers were hit across several weeks. This time, the bottom fell out overnight.
+
+On February 27, 141 ships crossed the strait. By March 2, the number was 20. On March 3, three ships made it through. The IRGC declared the strait "closed" on March 4 and launched 21 attacks on merchant vessels in a single day. By March 7, just 4 ships were transiting — a 97% collapse in eight days.
+
+<CrisisScrolly client:visible />
+
+<Breakout>
+  <TransitCollapseChart client:visible />
+</Breakout>
+
+More than 200 vessels were soon anchored outside the strait, waiting. Twenty-two Indian ships — tankers and gas carriers — were among them. The queue of stranded cargo was worth billions, and every day of delay compounded the cost.
+
+Iran then introduced selective enforcement. The strait was not physically blocked — it was politically controlled. Ships flagged to the US, Israel, and Western allies were turned away or threatened. Iranian crude, paradoxically, continued to flow — roughly 1.8 million barrels per day from Kharg Island, mostly to China, carried by "shadow fleet" tankers. India's External Affairs Minister Jaishankar negotiated directly with Tehran and secured passage for four Indian vessels carrying 92,000 tonnes of LPG. Japan was granted transit rights on March 21. But the volumes trickling through amount to less than 10% of normal flows.
+
+<Breakout>
+  <SelectiveClosureIllustration client:visible />
+</Breakout>
+
+<Callout type="context" title="How Iran closed the strait without closing it">
+  Iran's rhetoric says the strait is "closed." In reality, Iran is *controlling* it — deciding which ships pass, from which countries, carrying what cargo. Vessels carrying Iranian crude still transit daily. China-bound tankers are quietly waved through. India negotiated passage ship by ship. The effect is the same as a full closure for most of the world's oil supply, but Iran retains leverage and revenue. As the Wall Street Journal reported, Iran is now "exporting more oil today than before the war."
+</Callout>
+
+<SectionDivider label="The price cascade" />
+
+## From crude oil to your kitchen
+
+The cascade began in seconds. Oil traders in London repriced Brent crude within minutes of the first IRGC attacks on merchant vessels. Within forty-eight hours, the shock had reached fuel pumps in Lagos and fertilizer shops in Dhaka.
+
+<TintedSection variant="warm">
+  <div class="max-w-4xl mx-auto">
+    <p class="font-sans text-[0.75rem] font-bold tracking-[0.2em] uppercase text-accent mb-10 text-center">The cascade — each shock amplifies the next</p>
+    <div class="cascade-flow">
+      <div class="cascade-step">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white font-sans text-[0.75rem] font-bold mb-3">1</span>
+        <p class="font-sans text-[0.75rem] font-bold text-ink tracking-wide uppercase mb-2">Oil</p>
+        <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.75rem] md:text-[2.25rem] font-light text-accent leading-none">+74%</p>
+        <p class="mt-3 font-sans text-[0.75rem] text-ink-tertiary leading-snug">Brent crude<br/>$72.6 → $126/bbl peak</p>
+      </div>
+      <div class="cascade-step">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-viz-amber text-white font-sans text-[0.75rem] font-bold mb-3">2</span>
+        <p class="font-sans text-[0.75rem] font-bold text-ink tracking-wide uppercase mb-2">Shipping</p>
+        <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.75rem] md:text-[2.25rem] font-light text-viz-amber leading-none">4&times;</p>
+        <p class="mt-3 font-sans text-[0.75rem] text-ink-tertiary leading-snug">Tanker rates ME→China<br/>$117K → $486K/day</p>
+      </div>
+      <div class="cascade-step">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-viz-blue text-white font-sans text-[0.75rem] font-bold mb-3">3</span>
+        <p class="font-sans text-[0.75rem] font-bold text-ink tracking-wide uppercase mb-2">Gas</p>
+        <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.75rem] md:text-[2.25rem] font-light text-viz-blue leading-none">+74%</p>
+        <p class="mt-3 font-sans text-[0.75rem] text-ink-tertiary leading-snug">European TTF<br/>€32 → €56/MWh</p>
+      </div>
+      <div class="cascade-step">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-viz-green text-white font-sans text-[0.75rem] font-bold mb-3">4</span>
+        <p class="font-sans text-[0.75rem] font-bold text-ink tracking-wide uppercase mb-2">Fertilizer</p>
+        <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.75rem] md:text-[2.25rem] font-light text-viz-green leading-none">+69%</p>
+        <p class="mt-3 font-sans text-[0.75rem] text-ink-tertiary leading-snug">Urea<br/>$400 → $677/tonne</p>
+      </div>
+      <div class="cascade-step">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-viz-violet text-white font-sans text-[0.75rem] font-bold mb-3">5</span>
+        <p class="font-sans text-[0.75rem] font-bold text-ink tracking-wide uppercase mb-2">Food</p>
+        <p style="font-family: var(--font-display); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 36;" class="text-[1.75rem] md:text-[2.25rem] font-light text-viz-violet leading-none">+45M</p>
+        <p class="mt-3 font-sans text-[0.75rem] text-ink-tertiary leading-snug">people into food<br/>insecurity (WFP est.)</p>
+      </div>
+    </div>
+  </div>
+</TintedSection>
+
+Brent crude hit $100 per barrel on March 8 — the first time in four years. It peaked near $126. As of March 25, it trades around $100, still 40% above pre-crisis levels. Goldman Sachs calls this the largest oil supply disruption in history — roughly 17 million barrels per day removed from the Persian Gulf, 18 times larger than the peak hit to Russian oil in April 2022.
+
+But the cascade runs deeper than oil. Marine fuel doubled: from $437 to $874 per tonne for high-sulphur bunker in Singapore. War risk insurance went from $250,000 per voyage to over $1 million — then the major insurers cancelled Gulf cover altogether. The US government had to launch a $20 billion reinsurance programme through the DFC and Chubb to get any tankers moving. The shipping industry's initial reaction, as Lloyd's List reported: "$20 billion does not stop a missile."
+
+European gas nearly doubled. US gas barely moved — illustrating how differently this crisis hits different economies. US Henry Hub prices rose 11%. European TTF: up 90% from pre-war levels. Asian LNG spot prices jumped to the mid-$20s per million BTU. The divergence is structural: the US produces most of its own gas. Europe and Asia import it — and right now, they are competing for what is left.
+
+<Breakout>
+  <PriceCascadeChart client:visible />
+</Breakout>
+
+<Breakout>
+  <GasolineByRegionChart client:visible />
+</Breakout>
+
+<Breakout>
+  <InsuranceCostIllustration client:visible />
+</Breakout>
+
+### The petrochemical shock
+
+Petrochemicals are in nearly everything manufactured — plastics, packaging, textiles, tyres, paint, adhesives. The Gulf produces enormous quantities. And the disruption is already severe.
+
+Methanol — the feedstock for plastics, packaging films, adhesives, and detergents — is up 50%. Forty percent of the world's methanol supply comes from the Gulf and is now stranded. Propylene, used in everything from food packaging to car bumpers, has surged 78% in Europe and 56% in South Korea. Ethylene, the most widely used petrochemical on Earth, is up 63% in Japan and 59% in Europe. Butadiene — the raw material for tyres and synthetic rubber — has risen 118% in South Korea.
+
+<Breakout>
+  <ChemicalCascadeChart client:visible />
+</Breakout>
+
+<Callout type="insight" title="What petrochemical prices actually mean">
+  When methanol prices rise 50%, the cost of making plastic bottles, polyester clothing, plywood adhesives, and acrylic paint all rise with it. When propylene jumps 78%, the cost of food packaging, medical syringes, and nappies follows. Nobody tracks these prices at the breakfast table. But you pay them every time you buy anything wrapped, packaged, or transported.
+</Callout>
+
+<SectionDivider label="The hidden link" />
+
+## The food chain runs through the Gulf
+
+Sixteen million tonnes of fertilizer are shipped from the Persian Gulf each year — one-third of all seaborne fertilizer trade globally. Two-thirds of it is urea, the nitrogen compound that modern agriculture cannot function without. Take away synthetic nitrogen, and global crop yields fall by roughly half.
+
+The chain from the strait to a plate of food runs through urea.
+
+Natural gas is the primary feedstock for urea. When gas prices spike, fertilizer prices follow — typically with a lag of a few weeks. Urea has already surged from around $400 per tonne before the crisis to $677 — a 69% increase. Fitch has raised its 2026 ammonia and urea price forecasts by 25%. The timing could hardly be worse: this is the Northern Hemisphere spring planting season, when demand peaks.
+
+<Breakout>
+  <OilFoodCorrelationChart client:visible />
+</Breakout>
+
+When fertilizer prices rise like this, the impact splits along income lines. Farmers in wealthy countries absorb the cost and pass it to consumers, who grumble and pay. Farmers in poor countries — where fertilizer already represents a larger share of input costs, where credit is thin and margins are thinner — simply use less. Yields fall. Less food is produced. Prices rise. The World Food Programme projects that 45 million additional people could fall into acute food insecurity if the disruption continues through mid-2026.
+
+<Callout type="warning" title="The 2022 precedent">
+  When Russia's invasion of Ukraine disrupted energy markets in 2022, Europe outbid developing nations for LNG. European imports surged 60%. Bangladesh, Pakistan, and India saw their LNG imports fall 13-17%. They did not cut back by choice. They were outbid by wealthier buyers. The same pattern is now repeating at larger scale. Ember calls this "Asia's Ukraine moment."
+</Callout>
+
+### The damage to Qatar changes the gas map for years
+
+Qatar's Ras Laffan LNG complex — the largest in the world — took direct hits during the strikes. Two of its fourteen liquefaction trains and one of its two gas-to-liquids facilities were destroyed. That is 12.8 million tonnes of LNG capacity — 17% of national output — gone for an estimated three to five years, according to Qatar Energy CEO Saad Al-Kaabi. Qatar declared force majeure on LNG contracts to Italy, Belgium, South Korea, and China. Even the undamaged trains will take three to four months to reach full loading once the fighting stops.
+
+
+Qatar was also planning to expand production by 30 million tonnes per year — the largest LNG supply growth wave the market has ever expected. Those expansion plans are now delayed or halted. Goldman Sachs warns this will keep significant pressure on global gas prices well into 2027.
+
+And helium — a byproduct of natural gas processing — has doubled in price. Qatar supplies 34% of the global market. Every MRI machine, every semiconductor fab, every cryogenics laboratory that uses helium is now paying for a war it had no part in.
+
+<Breakout>
+  <LNGExposureChart client:visible />
+</Breakout>
+
+<TintedSection variant="rose">
+  <div class="max-w-4xl mx-auto">
+    <p class="font-sans text-[0.6875rem] font-bold tracking-[0.2em] uppercase text-accent mb-8 text-center">The water crisis within the energy crisis</p>
+    <p class="font-serif text-[1.0625rem] font-light leading-[1.7] text-ink-secondary text-center max-w-2xl mx-auto mb-8" style="text-wrap: pretty;">
+      Gulf states depend on desalination for survival. Desalination runs on energy. When energy is disrupted, so is drinking water.
+    </p>
+  </div>
+</TintedSection>
+
+<Breakout>
+  <DesalinationChart client:visible />
+</Breakout>
+
+<Breakout>
+  <GCCGDPHitChart client:visible />
+</Breakout>
+
+Kuwait gets 90% of its freshwater from desalination. Saudi Arabia: 70%. Oman: 86%. Israel: 75%. These plants run on gas and electricity generated from gas. Iran's drone strikes have already hit civilian infrastructure in the Gulf — including, reportedly, the area around Kuwait's Doha West desalination plant. Kuwait's government described the situation as "beyond catastrophic." The energy crisis does not just threaten fuel and food. It threatens the ability of entire populations to drink clean water.
+
+<SectionDivider label="Who gets hit hardest" />
+
+## The pain is not shared equally
+
+In Dar es Salaam, at the Kariakoo market, a tomato seller named Amina has watched her wholesale costs rise 15% in a single week. The urea that fertilised her tomatoes came from the Gulf. The diesel that brought them to market came through the Gulf. Her customers — households spending half their income on food — cannot absorb a 15% price increase. They buy less. She earns less. The arithmetic is brutal and specific to her.
+
+Sub-Saharan Africa imports over 90% of its fertilizer. Average application rates are already the lowest in the world — just 22 kilograms per hectare, compared to 150 in South Asia and over 200 in East Asia. When fertilizer prices jump 69%, a farmer in Tanzania does not pay more — she uses less. Her maize yield drops. Her family eats what is left.
+
+<Breakout>
+  <FertilizerVulnerabilityChart client:visible />
+</Breakout>
+
+Four of the ten most Gulf-dependent countries for fertilizer imports are classified by the UN as **Least Developed Countries**. Sudan — already engulfed in civil war, importing 80% of its wheat — depends on the Gulf for 54% of its sea-imported fertilizer. Somalia: 30%. Tanzania: 31%. Mozambique: 22%. A 20% rise in food costs means children eating once a day instead of twice.
+
+The vulnerability extends well beyond the poorest nations. Singapore depends on imported oil and gas for 99% of its primary energy. South Korea: 60%. Japan: 56%. Greece, with 56% Hormuz exposure, has seen its equity market fall 15%. Pakistan's KSE-100 index crashed 9.57% in a single session — 16,089 points — on March 4. Indonesia: down 15%.
+
+
+<Breakout>
+  <VulnerabilityChart client:visible />
+</Breakout>
+
+<Callout type="warning" title="The borrowing cost spiral">
+  The crisis arrives when many developing economies already struggle to service debt. Iraq's sovereign bond yield jumped 0.64 percentage points to 7.13%. Bahrain: up 0.41 points to 7.01%. Higher borrowing costs mean less money for food subsidies and social safety nets — precisely when they are needed most. The GCC economies collectively are losing an estimated **$700 million per day** in oil revenue. Two months of disruption would approach **$80 billion** in losses.
+</Callout>
+
+<SectionDivider label="India's exposure" />
+
+## India's energy Achilles heel
+
+India depends on imported crude for 89% of its refining needs — one of the highest ratios among major economies. About 40% of that crude transits the Strait of Hormuz. But the vulnerability runs deeper than oil: 90% of India's LPG imports and a significant share of its LNG come through the same corridor. When the strait closed, 22 Indian vessels were stranded, LPG inflows fell 46% overnight, and the government invoked the Essential Commodities Act.
+
+<StatRow columns={4}>
+  <StatCard value="9.5" label="days of strategic petroleum reserves" change="Japan: 150 days" changeDirection="down" />
+  <StatCard value="89%" label="crude import dependency" change="for refining needs" />
+  <StatCard value="46%" label="drop in daily LPG imports" />
+  <StatCard value="Rs 913" label="LPG cylinder price" change="+Rs 60 from February" changeDirection="up" />
+</StatRow>
+
+What makes India's position especially precarious is the Russia trap. Following the interim US trade deal in February 2026, India shifted away from discounted Russian crude — imports fell from 1.71 million barrels per day (2025 average) to 1.16 million. To replace it, India increased purchases from Saudi Arabia, Iraq, and the UAE. Hormuz dependency went up, not down, at precisely the wrong moment. West Asia now accounts for 51% of India's petroleum imports, up from 46.9% just months ago (CareEdge Ratings). Any attempt to resume Russian purchases risks renewed US sanctions or tariff retaliation.
+
+India's Strategic Petroleum Reserve holds 5.33 million tonnes — enough for **9.5 days** of imports. Japan maintains 150 days. South Korea: 90 days. The government purchased 60 million barrels of Russian crude for April delivery under a 30-day sanctions waiver. But refineries at Jamnagar, Mangalore, and Kochi were **physically designed for Gulf crude grades** — heavy, sour crude. Switching to lighter grades means lower throughput and reduced output of diesel and LPG.
+
+<Breakout>
+  <IndiaImpactChart client:visible />
+</Breakout>
+
+Retail petrol and diesel prices have been held steady — the state-owned oil marketing companies are absorbing losses rather than passing them through. CareEdge estimates OMCs can sustain this up to roughly $90 per barrel. With Brent at $100, the passthrough begins. If oil averages $100-120, inflation could reach 5.8-6.0%, the current account deficit could widen to 2.6-2.8% of GDP, and the rupee could weaken to 93-95 against the dollar. GDP growth, projected at 7.2% before the crisis, could fall below 6.5%.
+
+<Callout type="warning" title="The hidden channel: remittances and exports">
+  India received **$136 billion** in gross inward remittances in FY25. Over one-third came from Gulf nations — Saudi Arabia, UAE, Kuwait, Qatar. The war threatens these flows directly: construction has slowed, worker safety is at risk, and some Indian workers have been evacuated. Separately, India's exports to West Asia were **$64 billion** in FY25 — 14.7% of total exports. Shipping disruptions, higher insurance, and the Cape of Good Hope diversion (adding 2-3 weeks to transit times) are already squeezing margins for Indian exporters, particularly in perishable goods and low-value cargo.
+</Callout>
+
+The LPG crisis threatens to reverse one of India's largest public health achievements. The Pradhan Mantri Ujjwala Yojana gave free LPG connections to over 100 million poor households — families that previously burned wood, dung, and kerosene, inhaling smoke that kills an estimated 500,000 Indians a year (WHO). With cylinders now costing Rs 913, booking intervals stretched to 25-45 days, and restaurants in Mumbai and Bengaluru reporting shortages, many of these households are switching back to biomass. The government says it is prioritising 330 million household kitchens. But the arithmetic is unforgiving.
+
+<Breakout>
+  <IndiaWalletImpact client:visible />
+</Breakout>
+
+<Callout type="warning" title="8.9 million Indians in the Gulf">
+  India has approximately **8.9 million nationals** living and working in GCC countries — construction workers in the UAE, nurses in Kuwait, IT professionals in Qatar, shopkeepers in Oman (Ministry of External Affairs). They sent home roughly **$45-50 billion** in FY25. The war directly threatens their safety: construction has slowed, some workers have been evacuated, and Iran's strikes on civilian infrastructure in the UAE and Qatar have raised alarm. India has precedent for large-scale evacuations — in 1990, Air India evacuated **111,711 Indians from Kuwait** in 59 days during the Gulf War, one of the largest civilian airlifts in history (Guinness World Records). If the conflict escalates further, a similar operation may be required — and the remittance flows those workers sustain will be disrupted for far longer.
+</Callout>
+
+<Factoid label="The kharif clock">
+  India's kharif (monsoon) planting season begins in June-July. Farmers purchase urea and other fertilisers weeks before sowing. If urea prices are still elevated in May — and they will be, unless the strait reopens — planting decisions for rice, pulses, cotton, and sugarcane will be affected. The downstream effect: food price inflation arriving in September-November, precisely when festival demand peaks and state elections approach.
+</Factoid>
+
+<Factoid label="The fiscal squeeze">
+  India's fertiliser subsidy stood at **Rs 1.9 trillion** in FY26. If LNG prices stay elevated, this could rise sharply — the government subsidises urea at a fixed retail price and absorbs the production cost difference. Meanwhile, if OMCs pass through higher crude costs, petroleum tax revenue could decline as consumption falls. The Union Budget's fiscal math assumed Brent at $75-80. At $100, the deficit widens.
+</Factoid>
+
+<SectionDivider label="No plan B" />
+
+## The bypass gap
+
+The world has three pipeline alternatives to the Strait of Hormuz. Saudi Arabia's East-West Pipeline can redirect crude to the Red Sea port of Yanbu. The UAE's Habshan-Fujairah pipeline bypasses the strait to the Gulf of Oman. Iran's Goreh-Jask pipeline is small and new. Together, their usable spare capacity is about 5 million barrels per day. The strait normally carries 20.9 million.
+
+The gap — roughly 16 million barrels per day — has no backup.
+
+<Breakout>
+  <PipelineBypassIllustration client:visible />
+</Breakout>
+
+The IEA released 412 million barrels from strategic reserves across 32 nations — the largest coordinated release in the agency's 50-year history. The US contributed 172 million barrels; Japan 80 million; the UK 13.5 million; Germany 19.5 million; South Korea 22.5 million. At a maximum drawdown rate of about 2 million barrels per day, the release covers roughly three weeks. The market, as JP Morgan noted, "basically ignored" the announcement. Brent dipped 4% on the day, then resumed climbing to new highs.
+
+<Breakout>
+  <SPRMarketReactionChart client:visible />
+</Breakout>
+
+
+OPEC has roughly 4.4 million barrels per day of spare production capacity. More than 75% of it sits in Saudi Arabia, Kuwait, and the UAE — countries whose oil export infrastructure is behind the closed strait. The spare capacity exists. It cannot reach the market.
+
+
+<Breakout>
+  <HistoricalShocksChart client:visible />
+</Breakout>
+
+US production could increase, but the first new barrels would take six months to reach market, and the volumes — maybe 500,000 barrels per day — would be a fraction of what was lost. The EIA expects US crude output to remain largely flat through 2026. For LNG, the situation is worse. There is no pipeline bypass for natural gas. New US LNG capacity coming online this year amounts to about 15 billion cubic metres — against 110 billion cubic metres of annual production currently disrupted from the Gulf.
+
+<PullQuote attribution="Vice Admiral Kevin Donegan, USN (ret.), former Commander of the US Navy's Fifth Fleet">
+  I'm confident the US and its allies have the capability to escort commercial ships through the Strait. But it is important to distinguish between capability and capacity. Convoys would never be able to restore oil flows through the Strait to normal levels. Potentially only 20% of flows could be restored. No on-off switch exists here.
+</PullQuote>
+
+As of March 25, no escort missions are operational. The Pentagon is studying options under "Operation Epic Escort," but the US Navy told shipping industry leaders it does not currently have enough destroyers available. A basic escort operation would require 8-10 destroyers to protect convoys of 5-10 vessels per transit. Twenty-two nations have signed a joint statement expressing willingness to contribute — but preparations are still underway.
+
+<Factoid label="Why escorts are harder than they sound">
+  In **2002**, the US military ran a $250 million war game called **Millennium Challenge** simulating a conflict with a Middle Eastern adversary modelled on Iran. Retired Lt. Gen. Paul Van Riper, playing the adversary, used small boats, shore-based cruise missiles, and unconventional tactics to sink **16 US warships** — including an aircraft carrier — in the opening hours. The exercise was reset because the results were too devastating. Twenty-four years later, Iran's IRGC is executing a version of Van Riper's playbook with real weapons. (U.S. Naval Institute, Joint Forces Quarterly)
+</Factoid>
+
+Even with military escorts, commercial insurers remain unwilling to underwrite the risk. And there is a problem that persists beyond any ceasefire: mines. Iran has deployed naval mines in the strait — the CRS estimates fewer than ten so far, but Iran is believed to possess **thousands** of mines of various types, from old contact mines to sophisticated influence mines triggered by a ship's magnetic signature (Congressional Research Service, R45281). In April 1988, the USS Samuel B. Roberts was nearly sunk by an Iranian M-08 mine in these same waters — the blast tore a 4.5-metre hole in the hull (U.S. Naval Institute). Even after the fighting stops, mine clearance is slow, dangerous work. After the 1991 Gulf War, it took months to clear Iraqi mines from the northern Gulf. The strait does not simply "reopen" when a ceasefire is signed.
+
+<Callout type="context" title="Why this is not Abqaiq">
+  In September 2019, eighteen drones and seven cruise missiles struck Saudi Arabia's Abqaiq-Khurais oil processing complex — temporarily removing **5.7 million barrels per day**, about 5% of global supply. Oil prices spiked 15% in a single day, the largest one-day jump in history. But production was fully restored within two weeks, because the problem was **damage to a facility** — repairable, bounded, insurable. The Hormuz crisis is fundamentally different. The problem is not broken infrastructure. It is a country that controls the waterway and has chosen to use that control. Infrastructure damage heals on a known timeline. Strategic intent does not.
+</Callout>
+
+<SectionDivider label="Global context" />
+
+## The chokepoints that rule the world
+
+Eight narrow maritime passages carry the bulk of the world's seaborne energy trade. Hormuz dwarfs them all. It carries more than four times the oil of the Suez Canal and SUMED pipeline combined. The Turkish Straits include the Bosphorus — less than 700 metres wide at its narrowest — but no single state controls them with military force. The Strait of Malacca carries slightly more oil, but it is 2.5 kilometres wide at its narrowest and is not controlled by a belligerent power.
+
+Hormuz is uniquely vulnerable because one country — which has mined it, attacked ships in it, and now controls transit through it — lines the northern shore and holds seven of its eight major islands.
+
+<Breakout>
+  <ChokePointsChart client:visible />
+</Breakout>
+
+<TintedSection variant="cream">
+  <WorldChokePointsMap client:visible />
+</TintedSection>
+
+
+<Breakout>
+  <OilImportDependencyChart client:visible />
+</Breakout>
+
+Goldman Sachs estimates the peak hit to oil flows from the Persian Gulf at 17.6 million barrels per day — approximately 17% of global supply. JP Morgan puts the disruption at 19-20 million barrels per day including LPG and petrochemical feedstocks, or roughly 18% of global liquids supply. By either measure, this is three to five times larger than any previous oil supply shock. The 1973 Arab embargo removed about 6% of global supply. The 1979 Iranian revolution: 5%. The 1990 Iraqi invasion of Kuwait: 6%. The 2019 Abqaiq drone attack: 5%, and it lasted only days.
+
+<SectionDivider label="What comes next" />
+
+## The three scenarios
+
+Goldman Sachs, JP Morgan, ABN AMRO, and ING have all published scenario analyses. The differences between outcomes are enormous.
+
+<Breakout>
+  <GDPScenariosChart client:visible />
+</Breakout>
+
+<TintedSection variant="warm">
+  <div class="max-w-4xl mx-auto">
+    <p class="font-sans text-[0.6875rem] font-bold tracking-[0.2em] uppercase text-accent mb-8 text-center">Three scenarios for how this ends</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <p class="scenario-card__label">Resolved within a month</p>
+        <p class="scenario-card__value" style="color: var(--color-viz-blue); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;">$71</p>
+        <p class="scenario-card__detail">Brent Q4 2026 (Goldman).<br/>Global GDP drag: <strong>-0.3%</strong> for 2026.<br/>Supply shock = 6% hit to inventories. Recovery begins by summer.</p>
+      </div>
+      <div class="scenario-card">
+        <p class="scenario-card__label">Disrupted for 60 days</p>
+        <p class="scenario-card__value" style="color: var(--color-viz-amber); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;">$93</p>
+        <p class="scenario-card__detail">Brent Q4 2026 (Goldman).<br/>Global GDP drag: <strong>-0.5 to -0.9%</strong>.<br/>Nearly 20% hit to global oil inventories. Recession risk rises sharply.</p>
+      </div>
+      <div class="scenario-card scenario-card--severe">
+        <p class="scenario-card__label">Prolonged closure + scarring</p>
+        <p class="scenario-card__value" style="color: var(--color-accent); font-variation-settings: 'SOFT' 50, 'WONK' 0, 'opsz' 48;">$110+</p>
+        <p class="scenario-card__detail">Brent Q4 2027 (Goldman worst case).<br/>Global GDP drag: <strong>-1.3%+</strong>.<br/>Middle East production 2 mb/d lower even after reopening. Near-record prices. Global recession.</p>
+      </div>
+    </div>
+    <p class="font-sans text-[0.75rem] text-ink-faint text-center mt-4">ABN AMRO forecasts Brent averaging $100 in Q2, easing to $80 by year-end. ING's worst case: $140 if full blockage forces demand destruction. The Dallas Fed estimates that every quarter of full closure drags annualised GDP by 2.9 percentage points.</p>
+  </div>
+</TintedSection>
+
+
+
+The critical variable is not just when the strait reopens but what happens to production infrastructure in the meantime. After the five largest oil supply shocks in history — Iran-Iraq War, Gulf Wars I and II, the Libyan civil war, Russia's invasion of Ukraine — production in affected countries remained more than **40% below normal four years later**. Offshore infrastructure in the Gulf, which accounts for 25% of the region's crude, is particularly vulnerable: it takes far longer to restart offshore wells than onshore ones.
+
+<Breakout>
+  <FuturesCurvesChart client:visible />
+</Breakout>
+
+<Factoid label="Where talks stand">
+  On **March 25**, the US sent Iran a 15-point ceasefire plan. Iran rejected it as "maximalist and unreasonable" and issued a 5-point counterproposal demanding sovereignty over the Strait of Hormuz. Trump claimed talks are underway. Tehran did not confirm. Possible in-person talks may happen in Pakistan as early as March 28. Israel's military has said it wants "more weeks to fight."
+</Factoid>
+
+### The structural counterpoint
+
+The world is less vulnerable to oil shocks than it was in the 1970s. Energy intensity — the amount of energy used per dollar of GDP — has halved since 1973. The global EV fleet displaced 1.7 million barrels of oil per day in 2025, equivalent to 70% of Iran's total exports. Solar generation grew by more than 600 terawatt-hours in 2025, enough to replace all the electricity that could theoretically be generated by Hormuz LNG. Battery costs have fallen 36% since 2022. China saves over $28 billion per year in avoided oil imports through its EV fleet alone.
+
+<PullQuote attribution="Daan Walter, Principal at Ember">
+  This is Asia's Ukraine moment. Unlike the oil crises of the 1970s, there is now a better alternative. Electric vehicles are increasingly cost-competitive with gasoline cars. Oil volatility means EVs are a common-sense choice for countries wishing to insulate themselves from future shocks.
+</PullQuote>
+
+
+But three-quarters of the world's population still live in net fossil-fuel-importing countries. Their annual import bill was $1.7 trillion in 2024. Every $10 per barrel increase adds $160 billion to that bill. The transition is real. It has not arrived fast enough for the farmer buying urea this planting season, or the family in Nairobi whose cooking gas ran out last week.
+
+<SectionDivider label="The bottom line" />
+
+## A 10-kilometre corridor and the price of everything
+
+Four weeks in. The ceasefire talks have failed. The strait remains under Iranian control. Strategic reserves are being drawn down at a pace that buys roughly three more weeks.
+
+Sunita Devi, in south Delhi, got her replacement cylinder eleven days late. It cost Rs 913. She does not follow commodity markets or read Goldman Sachs research notes. She knows one thing: everything costs more, and nobody has explained why.
+
+The answer starts 3,500 kilometres from her kitchen, in a corridor of water between Iran and Oman. When it closed, her cooking gas cylinder went from two-day delivery to eleven. The price rose Rs 60. And the spring planting window — the one that determines whether fertilizer reaches fields before it is too late — closes in five weeks.
+
+<KeyInsight label="What to watch">
+  The ceasefire talks. The strait reopening timeline. The rate at which strategic reserves are being drawn down (the IEA release covers roughly three weeks at current disruption levels). And the fertilizer planting season — the window for spring planting in the Northern Hemisphere closes in early May. If farmers cannot afford or access urea before then, the food price impact will extend well into 2027, long after the strait reopens.
+</KeyInsight>
+
+---
+
+<div class="mt-16 pt-8 border-t border-rule-light">
+  <p class="font-sans text-[0.6875rem] font-bold tracking-[0.1em] uppercase text-ink-faint mb-4">Sources</p>
+  <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 font-sans text-[0.75rem] text-ink-tertiary leading-relaxed">
+    <div><p><strong class="font-semibold text-ink-secondary">Goldman Sachs</strong> — Top of Mind: Iran Conflict, How Long and How Bad?, Issue 147, 20 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">JP Morgan</strong> — Pandora's Bog: The Global Energy Shock of 2026, 21 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">UNCTAD</strong> — Strait of Hormuz Disruptions: Implications for Global Trade and Development, 10 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">U.S. Energy Information Administration</strong> — World Oil Transit Chokepoints, March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">ABN AMRO</strong> — The Ripple Effects of Strait of Hormuz Closure, 25 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">ING Research</strong> — Energy Markets Brace for a Prolonged Supply Disruption, 16 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Ember</strong> — The Energy Security Fallout: From Fossil Fuel Fragility to Electric Independence, 18 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Congressional Research Service</strong> — Iran Conflict and the Strait of Hormuz: Impacts on Oil, Gas, and Other Commodities (R45281), 11 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Centre for European Reform</strong> — War in Iran: Who Wins and Who Loses?, 20 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">International Energy Agency</strong> — Largest Ever Oil Stock Release, 11 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Federal Reserve Bank of Dallas</strong> — What the Closure of the Strait of Hormuz Means for the Global Economy, 20 March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">World Food Programme</strong> — Food Insecurity Projections, March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Chatham House</strong> — Sanam Vakil interview, via Goldman Sachs</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Washington Institute</strong> — Dennis Ross interview, via Goldman Sachs</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">CareEdge Ratings</strong> — Strait of Hormuz: The Rising Risk for India Inc., 4 March 2026; West Asia War and Impact on India, March 2026</p></div>
+    <div><p><strong class="font-semibold text-ink-secondary">Clarksons Research</strong> — Shipping Intelligence Network (transit data, freight indices)</p></div>
+  </div>
+</div>

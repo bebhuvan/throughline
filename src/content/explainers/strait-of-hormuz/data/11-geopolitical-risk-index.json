@@ -1,0 +1,22 @@
+{
+  "title": "Geopolitical risk is at its highest level in modern history",
+  "subtitle": "Daily Geopolitical Risk Index, 1985-2019 = 100",
+  "source": "Dario Caldara and Matteo Iacoviello, Federal Reserve Board, Goldman Sachs GIR",
+  "editorialPoint": "The 2026 Iran War has pushed geopolitical risk beyond 9/11, beyond the Iraq invasion, beyond Russia's invasion of Ukraine. We are in uncharted territory.",
+  "methodology": "Index counts the number of articles related to geopolitical tensions in 11 US, UK, and Canadian newspapers. Monthly index from 1900 uses NYT, Wall Street Journal, and Financial Times archives.",
+  "keyEvents": [
+    { "date": "1990-08", "label": "Kuwait Invasion", "value": 500 },
+    { "date": "1991-01", "label": "Gulf War", "value": 520 },
+    { "date": "2001-09", "label": "9/11", "value": 850 },
+    { "date": "2003-03", "label": "Invasion of Iraq", "value": 680 },
+    { "date": "2004-03", "label": "Madrid bombings", "value": 350 },
+    { "date": "2005-07", "label": "London bombings", "value": 300 },
+    { "date": "2015-11", "label": "Paris terror attacks", "value": 350 },
+    { "date": "2017-04", "label": "US airstrike kills Iran's top general", "value": 250 },
+    { "date": "2022-02", "label": "Russia invades Ukraine", "value": 600 },
+    { "date": "2023-10", "label": "Hamas attacks on Israel", "value": 450 },
+    { "date": "2025-06", "label": "Twelve-Day War: Israel/US strike Iran", "value": 550 },
+    { "date": "2026-02", "label": "US/Israel strikes on Iran — Hormuz crisis", "value": 900 }
+  ],
+  "note": "The current reading exceeds 9/11 levels. The index from 1900 shows only WWI, WWII, and the Cuban Missile Crisis reaching comparable levels."
+}

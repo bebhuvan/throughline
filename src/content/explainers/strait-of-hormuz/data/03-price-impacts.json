@@ -1,0 +1,10 @@
+[
+  { "label": "War risk insurance", "value": 300, "color": "var(--color-viz-red)" },
+  { "label": "Marine fuel (high sulphur)", "value": 100, "color": "var(--color-viz-red)" },
+  { "label": "Marine fuel (low sulphur)", "value": 99, "color": "var(--color-viz-red)" },
+  { "label": "European gas (TTF)", "value": 74, "color": "var(--color-viz-amber)" },
+  { "label": "Clean tanker index", "value": 72, "color": "var(--color-viz-amber)" },
+  { "label": "Dirty tanker index", "value": 54, "color": "var(--color-viz-amber)" },
+  { "label": "Brent crude", "value": 27, "color": "var(--color-viz-blue)" },
+  { "label": "Urea", "value": 20, "color": "var(--color-viz-green)" }
+]

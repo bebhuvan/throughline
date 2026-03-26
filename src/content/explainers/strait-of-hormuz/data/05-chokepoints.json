@@ -1,0 +1,10 @@
+[
+  { "label": "Strait of Malacca", "value": 23.7 },
+  { "label": "Strait of Hormuz", "value": 20.9, "color": "var(--color-accent)" },
+  { "label": "Cape of Good Hope", "value": 6.0 },
+  { "label": "Suez Canal + SUMED", "value": 4.9 },
+  { "label": "Danish Straits", "value": 4.9 },
+  { "label": "Bab el-Mandeb", "value": 3.5 },
+  { "label": "Turkish Straits", "value": 3.7 },
+  { "label": "Panama Canal", "value": 2.3 }
+]

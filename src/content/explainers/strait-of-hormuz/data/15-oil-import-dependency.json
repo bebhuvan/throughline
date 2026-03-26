@@ -1,0 +1,14 @@
+{
+  "title": "The world's biggest oil importers have only grown more dependent",
+  "subtitle": "Net oil imports by country, million tonnes, 1980-2025",
+  "source": "Energy Institute, JP Morgan Asset Management, 2025",
+  "editorialPoint": "China and India's oil import dependency has grown relentlessly for 40 years. The US became a net exporter — which is why this crisis hits Asia 10x harder than America. The US is only modestly shielded: it became a net oil exporter for the first time in 40 years, but crude oil is a global commodity, so American consumers still pay global prices.",
+  "data": [
+    { "country": "China", "y1980": 0, "y1990": 10, "y2000": 80, "y2010": 280, "y2020": 550, "y2025": 700, "trend": "steeply rising" },
+    { "country": "Europe", "y1980": 500, "y1990": 470, "y2000": 500, "y2010": 520, "y2020": 450, "y2025": 430, "trend": "declining slowly" },
+    { "country": "India", "y1980": 20, "y1990": 40, "y2000": 90, "y2010": 170, "y2020": 220, "y2025": 260, "trend": "rising steadily" },
+    { "country": "Japan", "y1980": 250, "y1990": 270, "y2000": 260, "y2010": 210, "y2020": 140, "y2025": 130, "trend": "declining" },
+    { "country": "United States", "y1980": 350, "y1990": 400, "y2000": 550, "y2010": 500, "y2020": -50, "y2025": -80, "trend": "now net exporter" }
+  ],
+  "note": "The US became a net oil exporter for the first time in 40 years. But it remains only modestly shielded from the price shock because crude oil trades on a global market. When Hormuz closes, Brent rises everywhere — including in Texas."
+}

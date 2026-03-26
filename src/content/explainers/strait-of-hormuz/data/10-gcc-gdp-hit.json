@@ -1,0 +1,15 @@
+{
+  "title": "Gulf economies could be hit harder than during Covid",
+  "subtitle": "Potential decline in non-oil GDP among GCC economies, %",
+  "source": "Haver Analytics, Goldman Sachs GIR, March 2026",
+  "editorialPoint": "For Oman, Bahrain, and Qatar, the economic hit from the Hormuz closure could exceed the damage from the Covid-19 pandemic — which was itself devastating",
+  "data": [
+    { "country": "Oman", "covidDecline": 3.5, "hormuzDecline": 10.0 },
+    { "country": "Saudi Arabia", "covidDecline": 5.0, "hormuzDecline": 8.5 },
+    { "country": "UAE", "covidDecline": 6.0, "hormuzDecline": 7.5 },
+    { "country": "Bahrain", "covidDecline": 4.5, "hormuzDecline": 7.0 },
+    { "country": "Qatar", "covidDecline": 4.0, "hormuzDecline": 6.5 },
+    { "country": "Kuwait", "covidDecline": 6.5, "hormuzDecline": 6.0 }
+  ],
+  "note": "Beyond oil and gas, the war is negatively impacting tourism, aviation, logistics, hospitality, domestic trade, manufacturing, and financial services. GCC economies collectively lose ~$700M/day in oil revenue alone. Kuwait and Bahrain would lose a fifth of oil production over two months."
+}

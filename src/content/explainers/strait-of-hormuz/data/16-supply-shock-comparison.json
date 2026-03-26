@@ -1,0 +1,18 @@
+{
+  "title": "The largest oil supply shock since World War II",
+  "subtitle": "Approximate oil disruptions and available global spare capacity, % of world supply",
+  "source": "Rapidan Energy Group, EIA, BP, St. Louis Fed, US Senate, JP Morgan Asset Management, March 9, 2026",
+  "editorialPoint": "Previous crises disrupted 5-10% of global supply with 5-35% spare capacity available. The Hormuz closure has disrupted 20% of supply with effectively 0% spare capacity — because the spare capacity sits behind the closed strait.",
+  "data": [
+    { "crisis": "Suez Crisis (1956-57)", "supplyDisrupted": 10, "spareCapacity": 35 },
+    { "crisis": "Six Day War (1967)", "supplyDisrupted": 5, "spareCapacity": 14 },
+    { "crisis": "Arab Oil Embargo (1973)", "supplyDisrupted": 7, "spareCapacity": 8 },
+    { "crisis": "Iranian Revolution (1978-79)", "supplyDisrupted": 5, "spareCapacity": 5 },
+    { "crisis": "Iran-Iraq War (1980-88)", "supplyDisrupted": 5, "spareCapacity": 10 },
+    { "crisis": "Gulf War I (1990-91)", "supplyDisrupted": 9, "spareCapacity": 4 },
+    { "crisis": "Gulf War II (2003-11)", "supplyDisrupted": 7, "spareCapacity": 1 },
+    { "crisis": "Abqaiq attack (2019)", "supplyDisrupted": 5, "spareCapacity": 1 },
+    { "crisis": "Gulf War III — Hormuz (2026)", "supplyDisrupted": 20, "spareCapacity": 0, "highlight": true }
+  ],
+  "note": "The 2026 crisis is uniquely dangerous because it combines the largest supply disruption with the smallest effective spare capacity. OPEC has ~4.4M b/d of spare capacity, but 75%+ of it is located in countries whose export infrastructure runs through the closed strait."
+}
